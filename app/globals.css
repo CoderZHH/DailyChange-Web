@@ -353,5 +353,5 @@ a:focus-visible { outline: 3px solid var(--red); outline-offset: 5px; border-rad
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation: none !important; }
 }
