@@ -19,6 +19,10 @@ npm run build
 
 品牌图片与真实 App 截图在 `public/media/`。支持与隐私页的内容直接输出为 HTML；无需 JavaScript 才能阅读。
 
+## 动效
+
+首页使用 React Bits 的 Scroll Float 和 Tilted Card 改编组件，来源与许可保存在 `THIRD_PARTY_NOTICES.md`。GSAP 负责章节入场、逐字显影、相纸视差和阅读进度；Motion 负责鼠标悬浮倾斜。时间文字带为自定义实现，随滚动加速，并在离开屏幕后暂停。移动端降低视差幅度，系统启用“减少动态效果”时停用动效。支持与隐私页保留静态阅读布局。
+
 ## 发布前核对
 
 - 隐私政策中的开发者法定姓名或主体、支持邮件保存期限。

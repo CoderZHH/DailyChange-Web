@@ -63,6 +63,39 @@ a:focus-visible { outline: 3px solid var(--red); outline-offset: 5px; border-rad
 .hero-baseline .page-shell { display: flex; align-items: center; gap: clamp(25px, 4vw, 62px); min-height: 65px; font-family: Georgia, serif; font-size: 12px; letter-spacing: .28em; }
 .baseline-rule { width: 60px; height: 1px; background: #d5a5a0; }
 
+/* Motion keeps the printed-paper palette and the original static content. */
+.motion-home { overflow: clip; }
+.reading-progress { position: fixed; z-index: 50; top: 0; left: 0; width: 100%; height: 3px; background: #c34b42; transform: scaleX(0); transform-origin: left; pointer-events: none; }
+.scroll-float { display: inline-block; }
+.float-char { display: inline-block; }
+.manifesto .float-char:nth-child(n+6):nth-child(-n+11) { color: var(--red); }
+.tilted-card { position: relative; transform-style: preserve-3d; }
+.chapter-screen { position: relative; z-index: 2; perspective: 900px; }
+.detail-card { perspective: 900px; }
+.time-ribbon { overflow: hidden; background: var(--red); color: #fff5e9; padding-block: 17px; }
+.time-ribbon-track { display: flex; width: max-content; }
+.time-ribbon-group { display: flex; align-items: center; gap: 50px; padding-right: 50px; flex-shrink: 0; font-family: Georgia, serif; font-size: 42px; line-height: 1; letter-spacing: .04em; }
+.time-ribbon-group i { font-style: normal; font-size: 30px; color: #dca68f; }
+.time-ribbon-group span:nth-of-type(2) { color: transparent; -webkit-text-stroke: 1px #f7e1d0; }
+.hero-art-orbit::after { content: ""; position: absolute; inset: 23px; border: 1px dashed #c9ac9c; border-radius: 50%; animation: orbit-turn 90s linear infinite; }
+.hero-art-stamp { animation: stamp-breathe 5s ease-in-out infinite; }
+.hero-emphasis { position: relative; width: fit-content; }
+.hero-emphasis::after { content: ""; position: absolute; left: 3px; right: 0; bottom: -8px; height: 10px; border-top: 2px solid var(--red); border-radius: 50%; transform-origin: left; animation: ink-line 1.4s .8s both cubic-bezier(.2,.7,.2,1); }
+.today-media::after { animation: halo-pulse 7s ease-in-out infinite; }
+.primary-nav a, .button { transition: transform .3s cubic-bezier(.2,.8,.2,1), color .2s, background .2s, box-shadow .3s; }
+.primary-nav a:hover { transform: translateY(-2px); }
+.button:hover span { transform: translate(3px,-3px); }
+.button span { transition: transform .3s; }
+@keyframes orbit-turn { to { transform: rotate(360deg); } }
+@keyframes stamp-breathe { 50% { box-shadow: 0 0 0 12px #9e25290a; } }
+@keyframes halo-pulse { 50% { transform: scale(1.18); opacity: .35; } }
+@keyframes ink-line { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (max-width: 760px) {
+  .time-ribbon { padding-block: 16px; }
+  .time-ribbon-group { gap: 24px; padding-right: 24px; font-size: 30px; }
+  .time-ribbon-group i { font-size: 21px; }
+}
+
 .manifesto { position: relative; padding-block: 125px 132px; text-align: center; }
 .manifesto p { margin: 25px auto 0; font-family: "Songti SC", "STSong", serif; font-size: clamp(34px, 4.4vw, 62px); line-height: 1.45; letter-spacing: -.06em; }
 .manifesto em, .details-heading em, .closing-section em, .interior-hero em { color: var(--red); font-style: normal; }
