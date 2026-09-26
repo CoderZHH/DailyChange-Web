@@ -2,6 +2,8 @@
 
 公开发布的 DailyChange iOS App 官网。页面为 `/`、`/support/`、`/privacy/`，使用 Next.js 静态导出并部署到 GitHub Pages。网站不需要后端、账号或数据库。
 
+线上地址：https://coderzhh.github.io/DailyChange-Web/
+
 ## 本地运行
 
 ```bash
@@ -28,7 +30,7 @@ npm run build
 - 隐私政策中的开发者法定姓名或主体、支持邮件保存期限。
 - 正式 iOS 版本的人脸关键点、地点和权限行为；当前代码将人脸对齐元数据写入本地记录，可能随用户开启的 iCloud 备份一起保存。
 - 正式版本中删除既有 iCloud 数据的系统入口。
-- GitHub Pages 实际托管设置和访问日志说明。
+- GitHub 访问日志的具体保存期限（托管已确认为 GitHub Pages，未配置统计工具）。
 - App Store 正式下载链接。
 
 反馈邮箱 `zhj1140351774@gmail.com` 已由产品方确认。
