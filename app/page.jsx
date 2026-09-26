@@ -28,8 +28,8 @@ export default function HomePage() {
             <div className="hero-art" aria-label="DailyChange 的真实 App 界面截图">
               <span className="hero-art-orbit" aria-hidden="true" />
               <span className="hero-art-note" aria-hidden="true">给今天<br />留一张。</span>
-              <div className="hero-photo-back"><img src={asset("/media/app/past-calendar.jpg")} alt="" /></div>
-              <div className="hero-photo-front"><img src={asset("/media/app/today-polaroid.jpg")} alt="今天相纸的真实 App 截图" /></div>
+              <div className="hero-photo-back"><img src={asset("/media/app/past-calendar.jpg")} width="1278" height="2778" alt="" /></div>
+              <div className="hero-photo-front"><img src={asset("/media/app/today-polaroid.jpg")} width="1278" height="2778" alt="今天相纸的真实 App 截图" /></div>
               <span className="hero-art-stamp" aria-hidden="true">KEEP THE DAY<br />DAILYCHANGE</span>
             </div>
           </div>
@@ -50,7 +50,7 @@ export default function HomePage() {
               <p>打开相机，为今天拍一张照片。写下相纸留言，让画面之外的心情也有地方安放。</p>
               <div className="chapter-aside">一张相纸，记住此刻。</div>
             </div>
-            <div className="chapter-media today-media"><span className="media-halo" aria-hidden="true" /><div className="chapter-screen"><TiltedCard amplitude={9}><AppScreen src="today-camera.jpg" alt="DailyChange 今天拍摄界面的真实截图" /></TiltedCard></div><span className="media-caption">NO. 001 &nbsp; / &nbsp; TODAY</span></div>
+            <div className="chapter-media today-media"><span className="media-halo" aria-hidden="true" /><div className="chapter-screen"><TiltedCard amplitude={9}><AppScreen src="today-polaroid.jpg" alt="DailyChange 今天相纸界面的真实截图" /></TiltedCard></div><span className="media-caption">NO. 001 &nbsp; / &nbsp; TODAY</span></div>
           </div>
         </section>
 
