@@ -29,7 +29,9 @@ a:focus-visible { outline: 3px solid var(--red); outline-offset: 5px; border-rad
 .primary-nav a:hover, .site-footer a:hover { color: var(--red); }
 .primary-nav a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -8px; height: 1px; background: var(--red); transition: right .25s ease; }
 .primary-nav a:hover::after { right: 0; }
-.primary-nav .language-switch { letter-spacing: 0; color: var(--red); padding-left: 16px; border-left: 1px solid var(--line); }
+.primary-nav .language-switch { display: inline-flex; align-items: center; min-height: 30px; padding: 5px 10px; border: 1px solid var(--red); border-radius: 4px; letter-spacing: 0; color: var(--red); background: transparent; }
+.primary-nav .language-switch:hover { color: var(--paper-light); background: var(--red); }
+.primary-nav .language-switch::after { display: none; }
 .float-word { display: inline-block; white-space: nowrap; }
 .screenshot-note { padding-block: 0 24px; margin-block: 0; color: var(--muted); font-size: 12px; text-align: right; }
 .english-home .hero h1, .english-home .chapter h2, .english-home .details-heading h2, .english-home .closing-section h2, .english-interior .interior-hero h1, .english-interior .guidance-grid h2, .english-interior .faq-heading h2, .english-interior .policy-section h2 { font-family: Georgia, "Times New Roman", serif; letter-spacing: -.035em; }
@@ -44,7 +46,7 @@ a:focus-visible { outline: 3px solid var(--red); outline-offset: 5px; border-rad
 .english-interior .policy-section h2 { font-size: clamp(31px, 3vw, 44px); }
 .english-interior .policy-row h3 { font-size: 18px; line-height: 1.5; }
 @media (max-width: 760px) {
-  .primary-nav .language-switch { padding-left: 10px; }
+  .primary-nav .language-switch { padding: 5px 8px; }
   .english-home .hero h1 { font-size: clamp(35px, 8.8vw, 54px); }
   .english-home .hero-lede { font-size: 15px; }
   .english-home .chapter h2 { font-size: clamp(42px, 9vw, 58px); }

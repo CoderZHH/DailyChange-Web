@@ -3,7 +3,7 @@ import { asset } from "../../../lib/paths";
 
 export const metadata = {
   title: {
-    default: "DailyChange — One photo a day. See how time changes you.",
+    default: "DailyChange: A Photo a Day — See how time changes you.",
     template: "%s · DailyChange",
   },
   description:

@@ -27,6 +27,8 @@ npm run build
 
 英文页面保留真实中文 App 截图，首页可见标注为中文界面示例，图片替代文字也注明。更新产品事实与隐私政策时，应同步修改中英两份正文。GitHub Pages 自定义域名变更时，还需更新 `lib/localeMetadata.js` 中的网站域名。
 
+英文 App Store 名称已确认为 `DailyChange: A Photo a Day`；App 内与官网品牌仍使用 `DailyChange`。页面顶部以带边框的语言链接切换到对应版本。
+
 ## 动效
 
 首页使用 React Bits 的 Scroll Float 和 Tilted Card 改编组件，来源与许可保存在 `THIRD_PARTY_NOTICES.md`。GSAP 负责章节入场、逐字显影、相纸视差和阅读进度；Motion 负责鼠标悬浮倾斜。时间文字带为自定义实现，随滚动加速，并在离开屏幕后暂停。移动端降低视差幅度，系统启用“减少动态效果”时停用动效。支持与隐私页保留静态阅读布局。

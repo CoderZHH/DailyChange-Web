@@ -97,7 +97,7 @@ export default function HomePage() {
         <section className="closing-section">
           <div className="page-shell closing-grid">
             <div><p className="eyebrow">A NOTE TO YOUR FUTURE SELF</p><h2><ScrollFloat>Your future self</ScrollFloat><br /><ScrollFloat>will be glad</ScrollFloat><br /><em><ScrollFloat>you kept today.</ScrollFloat></em></h2><p>DailyChange for iPhone. A place for the days you want to keep.</p></div>
-            <div className="closing-card"><img src={asset("/media/brand/app-icon.png")} width="94" height="94" alt="DailyChange app icon" /><span className="closing-card-title">DailyChange</span><span>One photo a day · A personal journal</span><div className="store-placeholder" aria-label="App Store download link coming soon">App Store link coming soon <span aria-hidden="true">↗</span></div><small>A download link will appear here once confirmed.</small></div>
+            <div className="closing-card"><img src={asset("/media/brand/app-icon.png")} width="94" height="94" alt="DailyChange app icon" /><span className="closing-card-title">DailyChange</span><span>One photo a day · A personal journal</span><small>English App Store name: DailyChange: A Photo a Day</small><div className="store-placeholder" aria-label="App Store download link coming soon">App Store link coming soon <span aria-hidden="true">↗</span></div><small>A download link will appear here once confirmed.</small></div>
           </div>
         </section>
       </main>
