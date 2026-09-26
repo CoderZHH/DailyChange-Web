@@ -1,7 +1,9 @@
-import SiteFooter from "../../components/SiteFooter";
-import SiteHeader from "../../components/SiteHeader";
+import { localeMetadata } from "../../../lib/localeMetadata";
+import SiteFooter from "../../../components/SiteFooter";
+import SiteHeader from "../../../components/SiteHeader";
 
 export const metadata = {
+  ...localeMetadata("/privacy/", "zh"),
   title: "隐私政策",
   description: "了解 DailyChange iOS App 与官方网站如何处理本地记录、iCloud 备份、支持邮件和网站访问数据。",
 };
@@ -11,7 +13,7 @@ const email = "zhj1140351774@gmail.com";
 export default function PrivacyPage() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeader currentPath="/privacy/" />
       <main className="interior-main privacy-main">
         <section className="interior-hero privacy-hero"><div className="page-shell privacy-hero-inner"><p className="eyebrow"><span className="eyebrow-line" /> YOUR DAYS ARE YOURS</p><h1>隐私政策<span className="title-period">.</span></h1><p className="interior-intro">DailyChange 用来记录你的生活。下面说明这些记录保存在何处、什么时候会产生云端副本，以及你可以怎样管理它们。</p><div className="policy-meta"><span>生效日期：2026 年 9 月 26 日</span><span>更新日期：2026 年 9 月 26 日</span></div></div></section>
 

@@ -1,5 +1,5 @@
-import "./globals.css";
-import { asset } from "../lib/paths";
+import "../globals.css";
+import { asset } from "../../lib/paths";
 
 export const metadata = {
   title: {

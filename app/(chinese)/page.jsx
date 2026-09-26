@@ -1,11 +1,14 @@
-import HomeMotion from "../components/HomeMotion";
-import TimeRibbon from "../components/TimeRibbon";
-import ScrollFloat from "../components/react-bits/ScrollFloat";
-import TiltedCard from "../components/react-bits/TiltedCard";
-import AppScreen from "../components/AppScreen";
-import SiteFooter from "../components/SiteFooter";
-import SiteHeader from "../components/SiteHeader";
-import { asset } from "../lib/paths";
+import { localeMetadata } from "../../lib/localeMetadata";
+import HomeMotion from "../../components/HomeMotion";
+import TimeRibbon from "../../components/TimeRibbon";
+import ScrollFloat from "../../components/react-bits/ScrollFloat";
+import TiltedCard from "../../components/react-bits/TiltedCard";
+import AppScreen from "../../components/AppScreen";
+import SiteFooter from "../../components/SiteFooter";
+import SiteHeader from "../../components/SiteHeader";
+import { asset } from "../../lib/paths";
+
+export const metadata = localeMetadata("/", "zh");
 
 export default function HomePage() {
   return (

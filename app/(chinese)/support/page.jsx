@@ -1,8 +1,10 @@
-import SiteFooter from "../../components/SiteFooter";
-import SiteHeader from "../../components/SiteHeader";
-import { page } from "../../lib/paths";
+import { localeMetadata } from "../../../lib/localeMetadata";
+import SiteFooter from "../../../components/SiteFooter";
+import SiteHeader from "../../../components/SiteHeader";
+import { page } from "../../../lib/paths";
 
 export const metadata = {
+  ...localeMetadata("/support/", "zh"),
   title: "帮助与反馈",
   description: "DailyChange 使用帮助、常见问题与反馈邮箱。",
 };
@@ -33,7 +35,7 @@ const questions = [
 export default function SupportPage() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeader currentPath="/support/" />
       <main className="interior-main">
         <section className="interior-hero support-hero">
           <div className="page-shell interior-hero-grid">

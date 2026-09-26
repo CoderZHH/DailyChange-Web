@@ -1,6 +1,6 @@
 # DailyChange 官方网站
 
-公开发布的 DailyChange iOS App 官网。页面为 `/`、`/support/`、`/privacy/`，使用 Next.js 静态导出并部署到 GitHub Pages。网站不需要后端、账号或数据库。
+公开发布的 DailyChange iOS App 官网。中文页面为 `/`、`/support/`、`/privacy/`，英文页面为 `/en/`、`/en/support/`、`/en/privacy/`，使用 Next.js 静态导出并部署到 GitHub Pages。网站不需要后端、账号或数据库。
 
 线上地址：https://coderzhh.github.io/DailyChange-Web/
 
@@ -20,6 +20,12 @@ npm run build
 输出在 `out/`。GitHub Actions 构建时设置 `NEXT_PUBLIC_BASE_PATH=/DailyChange-Web`，以适配项目 Pages 地址。若将来启用自定义域名，应同时调整 workflow 中的 base path，并重新构建。
 
 品牌图片与真实 App 截图在 `public/media/`。支持与隐私页的内容直接输出为 HTML；无需 JavaScript 才能阅读。
+
+## 中英文内容
+
+`app/(chinese)/` 与 `app/(english)/en/` 分别使用中文、英文根布局，输出对应的 HTML `lang`。路由分组不改变中文公开地址。导航、页脚、资源路径和动效组件共享；页首语言切换链接进入对应页面，不保存语言 Cookie，也不做自动跳转。每页输出对应的 canonical 与中英文 alternate 链接。原有条款页不存在，未额外添加。
+
+英文页面保留真实中文 App 截图，首页可见标注为中文界面示例，图片替代文字也注明。更新产品事实与隐私政策时，应同步修改中英两份正文。GitHub Pages 自定义域名变更时，还需更新 `lib/localeMetadata.js` 中的网站域名。
 
 ## 动效
 

@@ -21,7 +21,11 @@ export default function ScrollFloat({ children, className = "", as: Tag = "span"
     });
     return () => media.revert();
   }, []);
+  const characters = (text, prefix = "") => Array.from(text).map((char, i) => <span className="float-char" key={`${prefix}${i}`}>{char === " " ? "\u00a0" : char}</span>);
+  const text = /[a-zA-Z]/.test(children)
+    ? children.split(/(\s+)/).map((word, i) => /\s/.test(word) ? " " : <span className="float-word" key={i}>{characters(word, `${i}-`)}</span>)
+    : characters(children);
   return <Tag ref={ref} className={`scroll-float ${className}`} aria-label={children}>
-    <span aria-hidden="true">{Array.from(children).map((char, i) => <span className="float-char" key={i}>{char === " " ? "\u00a0" : char}</span>)}</span>
+    <span aria-hidden="true">{text}</span>
   </Tag>;
 }

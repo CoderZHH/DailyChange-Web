@@ -29,6 +29,30 @@ a:focus-visible { outline: 3px solid var(--red); outline-offset: 5px; border-rad
 .primary-nav a:hover, .site-footer a:hover { color: var(--red); }
 .primary-nav a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -8px; height: 1px; background: var(--red); transition: right .25s ease; }
 .primary-nav a:hover::after { right: 0; }
+.primary-nav .language-switch { letter-spacing: 0; color: var(--red); padding-left: 16px; border-left: 1px solid var(--line); }
+.float-word { display: inline-block; white-space: nowrap; }
+.screenshot-note { padding-block: 0 24px; margin-block: 0; color: var(--muted); font-size: 12px; text-align: right; }
+.english-home .hero h1, .english-home .chapter h2, .english-home .details-heading h2, .english-home .closing-section h2, .english-interior .interior-hero h1, .english-interior .guidance-grid h2, .english-interior .faq-heading h2, .english-interior .policy-section h2 { font-family: Georgia, "Times New Roman", serif; letter-spacing: -.035em; }
+.english-home .hero h1 { font-size: clamp(45px, 4.6vw, 72px); line-height: 1.14; white-space: normal; }
+.english-home .chapter h2 { font-size: clamp(42px, 4.3vw, 65px); }
+.english-home .manifesto p { max-width: 1050px; font-size: clamp(32px, 4vw, 58px); }
+.english-home .manifesto .float-char { color: inherit; }
+.english-home .details-heading h2, .english-home .closing-section h2 { font-size: clamp(44px, 4.4vw, 68px); }
+.english-home .hero-art-note { font-family: Georgia, serif; }
+.english-home .hero-lede { font-size: 17px; }
+.english-interior .interior-hero h1 { font-size: clamp(54px, 5.7vw, 85px); }
+.english-interior .policy-section h2 { font-size: clamp(31px, 3vw, 44px); }
+.english-interior .policy-row h3 { font-size: 18px; line-height: 1.5; }
+@media (max-width: 760px) {
+  .primary-nav .language-switch { padding-left: 10px; }
+  .english-home .hero h1 { font-size: clamp(35px, 8.8vw, 54px); }
+  .english-home .hero-lede { font-size: 15px; }
+  .english-home .chapter h2 { font-size: clamp(42px, 9vw, 58px); }
+  .english-home .details-heading h2, .english-home .closing-section h2 { font-size: clamp(42px, 9vw, 58px); }
+  .english-interior .interior-hero h1 { font-size: clamp(45px, 10vw, 65px); }
+  .english-interior .support-bottom { align-items: start; flex-direction: column; gap: 14px; }
+  .screenshot-note { font-size: 11px; text-align: left; }
+}
 
 .eyebrow, .section-tag, .card-kicker, .chapter-en, .detail-count, .policy-section-label { font-family: Georgia, "Times New Roman", "PingFang SC", serif; font-size: 12px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
 .eyebrow { display: flex; align-items: center; gap: 14px; color: var(--red); }
