@@ -1,4 +1,5 @@
 import { asset, page } from "../lib/paths";
+import { appStoreUrl } from "../lib/appStore";
 
 export default function SiteHeader({ locale = "zh", currentPath = "/" }) {
   const english = locale === "en";
@@ -14,6 +15,7 @@ export default function SiteHeader({ locale = "zh", currentPath = "/" }) {
           <a href={page(`${prefix}/#experience`)}>{english ? "Explore" : "产品体验"}</a>
           <a href={page(`${prefix}/support/`)}>{english ? "Support" : "帮助与反馈"}</a>
           <a href={page(`${prefix}/privacy/`)}>{english ? "Privacy" : "隐私政策"}</a>
+          <a className="header-download" href={appStoreUrl}>{english ? "Download" : "下载 App"} <span aria-hidden="true">↗</span></a>
           <a className="language-switch" href={page(`${english ? "" : "/en"}${currentPath}`)} hrefLang={english ? "zh-CN" : "en"} lang={english ? "zh-CN" : "en"} aria-label={english ? "阅读此页面的中文版" : "Read this page in English"}>{english ? "中文" : "English"}</a>
         </nav>
       </div>

@@ -1,4 +1,5 @@
 import { asset, page } from "../lib/paths";
+import { appStoreUrl } from "../lib/appStore";
 
 export default function SiteFooter({ locale = "zh" }) {
   const english = locale === "en";
@@ -11,6 +12,7 @@ export default function SiteFooter({ locale = "zh" }) {
           <p>{english ? "One photo a day. See how time changes you." : "每天一张，看见时间留下的变化。"}</p>
         </div>
         <nav aria-label={english ? "Footer navigation" : "页脚导航"}>
+          <a href={appStoreUrl}>{english ? "App Store" : "App Store 下载"}</a>
           <a href={page(`${prefix}/`)}>{english ? "Home" : "首页"}</a>
           <a href={page(`${prefix}/support/`)}>{english ? "Support" : "帮助与反馈"}</a>
           <a href={page(`${prefix}/privacy/`)}>{english ? "Privacy policy" : "隐私政策"}</a>

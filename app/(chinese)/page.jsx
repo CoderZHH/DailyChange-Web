@@ -7,6 +7,7 @@ import AppScreen from "../../components/AppScreen";
 import SiteFooter from "../../components/SiteFooter";
 import SiteHeader from "../../components/SiteHeader";
 import { asset } from "../../lib/paths";
+import { appStoreUrl } from "../../lib/appStore";
 
 export const metadata = localeMetadata("/", "zh");
 
@@ -23,8 +24,8 @@ export default function HomePage() {
               <h1 id="hero-title">每天一张，<br />看见时间<span className="hero-emphasis">留下的变化。</span></h1>
               <p className="hero-lede">从今天的一张相纸开始。回看走过的日子，也给未来的自己留一句话。</p>
               <div className="hero-actions">
-                <a className="button button-red" href="#experience">认识 DailyChange <span aria-hidden="true">↗</span></a>
-                <span className="availability">iOS App · App Store 链接即将公布</span>
+                <a className="button button-red" href={appStoreUrl}>前往 App Store 下载 <span aria-hidden="true">↗</span></a>
+                <a className="hero-secondary" href="#experience">认识 DailyChange <span aria-hidden="true">↓</span></a>
               </div>
               <div className="hero-index" aria-hidden="true"><span>01 今天</span><span>02 过去</span><span>03 明天</span></div>
             </div>
@@ -96,7 +97,7 @@ export default function HomePage() {
         <section className="closing-section">
           <div className="page-shell closing-grid">
             <div><p className="eyebrow">A NOTE TO YOUR FUTURE SELF</p><h2><ScrollFloat>未来的你，</ScrollFloat><br /><ScrollFloat>会感谢今天</ScrollFloat><br /><em><ScrollFloat>留下这一张。</ScrollFloat></em></h2><p>DailyChange 在 iPhone 上，陪你认真收藏每一天。</p></div>
-            <div className="closing-card"><img src={asset("/media/brand/app-icon.png")} width="94" height="94" alt="DailyChange App 图标" /><span className="closing-card-title">DailyChange</span><span>每天一张 · 个人记录 App</span><div className="store-placeholder" aria-label="App Store 下载链接待公布">App Store 下载链接即将公布 <span aria-hidden="true">↗</span></div><small>正式链接确定后将在这里提供下载入口。</small></div>
+            <div className="closing-card"><img src={asset("/media/brand/app-icon.png")} width="94" height="94" alt="DailyChange App 图标" /><span className="closing-card-title">DailyChange</span><span>每天一张 · 个人记录 App</span><a className="store-link" href={appStoreUrl}>在 App Store 下载 <span aria-hidden="true">↗</span></a><small>iPhone App · 实际可用地区以你的 App Store 为准。</small></div>
           </div>
         </section>
       </main>
