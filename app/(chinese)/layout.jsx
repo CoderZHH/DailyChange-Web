@@ -9,7 +9,7 @@ export const metadata = {
   },
   description: homeCopy.zh.description,
   applicationName: "DailyChange",
-  icons: { icon: asset("/media/brand/app-icon-192.webp") },
+  icons: { icon: { url: asset("/favicon.png"), type: "image/png", sizes: "96x96" } },
 };
 
 export default function RootLayout({ children }) {

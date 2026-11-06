@@ -4,6 +4,7 @@ const sharp = require("sharp");
 const root = path.resolve(__dirname, "..");
 async function main() {
   const brand = path.join(root, "public/media/brand");
+  await sharp(path.join(brand, "app-icon.png")).resize(96, 96).png().toFile(path.join(root, "public/favicon.png"));
   await sharp(path.join(brand, "app-icon.png")).resize(192, 192).webp({ quality: 90 }).toFile(path.join(brand, "app-icon-192.webp"));
   await sharp(path.join(brand, "dailychange-wordmark-wide.png")).resize(690).webp({ quality: 90 }).toFile(path.join(brand, "dailychange-wordmark-wide.webp"));
   const app = path.join(root, "public/media/app");
