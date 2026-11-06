@@ -35,7 +35,7 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: /DailyChange-Web
       - name: Check crawlable pages and metadata
-        run: python3 scripts/audit-seo.py --base-path /DailyChange-Web
+        run: python3 scripts/audit-seo.py --base-path /DailyChange-Web --homepage-url https://coderzhh.github.io/
       - name: Configure Pages
         uses: actions/configure-pages@v6
       - name: Upload site

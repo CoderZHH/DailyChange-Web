@@ -64,6 +64,13 @@ GitHub Pages 是项目子路径，robots.txt 只有放在 `https://coderzhh.gith
 
 品牌图与截图保留源文件，页面使用 WebP 和响应式截图以降低移动网络传输量。更新源图后运行 `npm run images:optimize`，再提交生成的图片。已有站点视觉与 App Store 媒体不随此步骤改变。
 
-构建后运行 `python3 scripts/audit-seo.py --base-path /DailyChange-Web`（无 basePath 的本地构建不传此参数）。检查逐页 canonical、语言互链、重复标题、站点地图覆盖、结构化数据解析及所有站内链接与资源；GitHub Pages 发布流程也执行此检查。
+构建后运行 `python3 scripts/audit-seo.py --base-path /DailyChange-Web --homepage-url https://coderzhh.github.io/`（无 basePath 的本地构建不传此参数）。检查逐页 canonical、语言互链、重复标题、站点地图覆盖、结构化数据解析及所有站内链接与资源；GitHub Pages 发布流程也执行此检查。
 
 产品与文案上下文见 `product-marketing-context.md`。搜索效果记录需区分“未测”“无数据”和实际的零展示／零引用；Lighthouse SEO 满分不代表已经收录或拥有排名。
+
+
+## Canonical homepage and publishing
+
+The existing Chinese homepage is also served directly at https://coderzhh.github.io/; there is no additional entry page. The project homepage remains available as an alias with a root canonical URL. English, support, privacy and guides keep their existing project paths.
+
+Website code stays in this repository. CoderZHH/CoderZHH.github.io only packages the already published homepage verbatim, its PNG favicon, sitemap and search-verification files. After this repository has deployed successfully, refresh the root homepage with `gh workflow run pages.yml --repo CoderZHH/CoderZHH.github.io`. The root publishing workflow verifies the source canonical URL, brand data and live resources before deployment.

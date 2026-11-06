@@ -75,6 +75,7 @@ def main():
     cli.add_argument('--directory', default='out')
     cli.add_argument('--base-path', default='')
     cli.add_argument('--origin', default='https://coderzhh.github.io')
+    cli.add_argument('--homepage-url', help='Canonical homepage when served at the hostname root')
     cli.add_argument('--report', help='Optional JSON output path')
     args = cli.parse_args()
     root = Path(args.directory).resolve()
@@ -91,7 +92,7 @@ def main():
         raise SystemExit('No exported pages found; run the production build first.')
 
     def url(route):
-        return origin + base + route
+        return args.homepage_url if route == '/' and args.homepage_url else origin + base + route
 
     def local_path(reference, source):
         parsed = urlparse(urljoin(url(source), reference))
@@ -166,7 +167,7 @@ def main():
         errors.append('Sitemap must contain every canonical public page once, and no unknown pages')
     for entry in entries:
         location = entry.findtext('s:loc', namespaces=namespace)
-        route = urlparse(location).path[len(base):]
+        route = next((route for route in pages if url(route) == location), None)
         alternates = {node.get('hreflang'): node.get('href') for node in entry.findall('x:link', namespace)}
         if route in pages and alternates != pages[route].languages:
             errors.append(f'{route}: sitemap language links disagree with HTML')
