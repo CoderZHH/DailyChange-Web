@@ -1,6 +1,6 @@
 # DailyChange 官方网站
 
-公开发布的 DailyChange iOS App 官网。中文页面为 `/`、`/support/`、`/privacy/`，英文页面为 `/en/`、`/en/support/`、`/en/privacy/`，使用 Next.js 静态导出并部署到 GitHub Pages。网站不需要后端、账号或数据库。
+公开发布的 DailyChange iOS App 官网。中文页面包括首页、帮助、隐私及 `/guides/` 下的使用指南；英文页面位于对应的 `/en/` 路径，使用 Next.js 静态导出并部署到 GitHub Pages。网站不需要后端、账号或数据库。
 
 线上地址：https://coderzhh.github.io/DailyChange-Web/
 
@@ -42,3 +42,14 @@ npm run build
 - App Store 正式下载链接。
 
 反馈邮箱 `zhj1140351774@gmail.com` 已由产品方确认。
+
+
+## SEO / GEO 维护与收录
+
+站点输出静态正文、逐页 canonical / hreflang、Open Graph / Twitter 分享信息，以及 `/sitemap.xml`。首页提供真实产品的 SoftwareApplication 数据，指南提供与可见正文一致的 Article 数据；没有编造评分，也不承诺搜索富结果或 AI 引用。产品问答集中在 `lib/productQuestions.js`，中英文指南集中在 `lib/guides.js`。
+
+Google Search Console 应添加 URL 前缀资源 `https://coderzhh.github.io/DailyChange-Web/`，验证后提交 `https://coderzhh.github.io/DailyChange-Web/sitemap.xml`。Bing Webmaster Tools 可从已验证的 Search Console 导入，或独立验证。账号验证和提交状态必须以后台实际回读为准，代码上线不代表已提交或收录。
+
+GitHub Pages 是项目子路径，robots.txt 只有放在 `https://coderzhh.github.io/robots.txt` 才适用；本仓库不控制域名根目录，因此不生成无效的子目录 robots.txt。缺少 robots.txt 默认不阻止抓取。不需要为 GEO 编造专用 schema、评分或 llms.txt。
+
+每周看 Search Console 的展示、点击、查询词与落地页；Bing 的 AI Performance 只覆盖其支持的 AI 产品。外部 AI 可见度工具依赖抽样问题，不能代表所有用户的真实问答。部署改域名或 basePath 时，同步更新 `lib/localeMetadata.js`、workflow、搜索后台与 sitemap。

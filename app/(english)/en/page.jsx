@@ -1,3 +1,5 @@
+import StructuredData from "../../../components/StructuredData";
+import HomeAnswers from "../../../components/HomeAnswers";
 import { localeMetadata } from "../../../lib/localeMetadata";
 import HomeMotion from "../../../components/HomeMotion";
 import TimeRibbon from "../../../components/TimeRibbon";
@@ -16,13 +18,14 @@ export default function HomePage() {
     <>
       <SiteHeader locale="en" />
       <HomeMotion />
+      <StructuredData locale="en" />
       <main className="motion-home english-home">
         <section className="hero" aria-labelledby="hero-title">
           <div className="page-shell hero-grid">
             <div className="hero-copy">
               <p className="eyebrow"><span className="eyebrow-line" /> A LITTLE PHOTO, EVERY DAY</p>
-              <h1 id="hero-title">One photo a day.<br />See how time <span className="hero-emphasis">changes you.</span></h1>
-              <p className="hero-lede">Start with a photo of today. Look back on the days you’ve lived, and leave a few words for your future self.</p>
+              <h1 id="hero-title">One selfie a day.<br />See how time <span className="hero-emphasis">changes you.</span></h1>
+              <p className="hero-lede">Take today’s selfie. Let DailyChange line up your eyes, then turn the photos you collect into a timelapse of you.</p>
               <div className="hero-actions">
                 <a className="button button-red" href={appStoreUrl}>Download on the App Store <span aria-hidden="true">↗</span></a>
                 <a className="hero-secondary" href="#experience">Explore DailyChange <span aria-hidden="true">↓</span></a>
@@ -84,6 +87,7 @@ export default function HomePage() {
         </section>
 
         <section className="details-section">
+          <p className="page-shell feature-availability">Print notes, future letters, sticker creation, photo walls, and diary features require PRO. Video export is included in Basic.</p>
           <div className="page-shell">
             <div className="details-heading"><div><div className="section-tag">MORE THAN A PHOTO <span>·</span> MAKE IT YOURS</div><h2><ScrollFloat>Give your days</ScrollFloat><br /><em><ScrollFloat>a little shape.</ScrollFloat></em></h2></div><p>A little decorating. A little writing. The memories beyond the photo deserve a place, too.</p></div>
             <div className="detail-grid">
@@ -94,6 +98,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        <HomeAnswers locale="en" />
 
         <section className="closing-section">
           <div className="page-shell closing-grid">

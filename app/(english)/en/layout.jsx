@@ -1,13 +1,13 @@
 import "../../globals.css";
+import { homeCopy } from "../../../lib/localeMetadata";
 import { asset } from "../../../lib/paths";
 
 export const metadata = {
   title: {
-    default: "DailyChange: A Photo a Day — See how time changes you.",
+    default: homeCopy.en.title,
     template: "%s · DailyChange",
   },
-  description:
-    "A personal journal for iPhone, one photo at a time. Capture today, revisit the past, and write to your future self.",
+  description: homeCopy.en.description,
   applicationName: "DailyChange",
   icons: { icon: asset("/media/brand/app-icon.png") },
 };

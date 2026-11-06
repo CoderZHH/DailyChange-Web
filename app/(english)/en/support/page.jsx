@@ -1,15 +1,13 @@
+import { productQuestions } from "../../../../lib/productQuestions";
 import { localeMetadata } from "../../../../lib/localeMetadata";
 import SiteFooter from "../../../../components/SiteFooter";
 import SiteHeader from "../../../../components/SiteHeader";
 import { page } from "../../../../lib/paths";
 
-export const metadata = {
-  ...localeMetadata("/support/", "en"),
-  title: "Support",
-  description: "DailyChange help, frequently asked questions, and contact email.",
-};
+export const metadata = localeMetadata("/support/", "en");
 
 const questions = [
+  ...productQuestions.en,
   {
     title: "How does “one photo a day” work?",
     answer: "DailyChange builds a personal timeline with one photo print for each day. You can retake today’s photo; the new photo replaces the previous record for that day. Days without a photo stay blank.",
@@ -28,7 +26,7 @@ const questions = [
   },
   {
     title: "How do I export photos or change videos?",
-    answer: "Open the relevant photo or export option in the App, then follow the prompts to save to Photos or share. Exporting requires the appropriate Photos permission and available device storage. If saving fails, check Photos permissions in iOS Settings and your available storage. When contacting support, mention which export option you used.",
+    answer: "Open the relevant photo or export option in the App, then follow the prompts to save to Photos. For a timelapse, open video export in Past, choose a date range with at least two usable photos, preview, and export. Exporting requires the appropriate Photos permission and available device storage. If saving fails, check Photos permissions in iOS Settings and your available storage. When contacting support, mention which export option you used.",
   },
 ];
 
@@ -59,7 +57,7 @@ export default function SupportPage() {
         <section className="faq-section">
           <div className="page-shell faq-grid">
             <div className="faq-heading"><div className="section-tag">GOOD TO KNOW <span>·</span> FAQ</div><h2>You might<br />be wondering.</h2><p>Daily records, permissions, backups, and exports.</p></div>
-            <div className="faq-list">{questions.map((item, index) => <article className="faq-item" key={item.title}><span className="faq-index">0{index + 1}</span><div><h3>{item.title}</h3><p>{item.answer}</p></div></article>)}</div>
+            <div className="faq-list">{questions.map((item, index) => <article className="faq-item" key={item.title}><span className="faq-index">{String(index + 1).padStart(2, "0")}</span><div><h3>{item.title}</h3><p>{item.answer}</p></div></article>)}</div>
           </div>
         </section>
         <section className="support-bottom page-shell"><span>How your records are stored and deleted</span><a href={page("/en/privacy/")}>Read the privacy policy <span aria-hidden="true">↗</span></a></section>

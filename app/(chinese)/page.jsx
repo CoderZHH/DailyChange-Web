@@ -1,3 +1,5 @@
+import StructuredData from "../../components/StructuredData";
+import HomeAnswers from "../../components/HomeAnswers";
 import { localeMetadata } from "../../lib/localeMetadata";
 import HomeMotion from "../../components/HomeMotion";
 import TimeRibbon from "../../components/TimeRibbon";
@@ -16,13 +18,14 @@ export default function HomePage() {
     <>
       <SiteHeader />
       <HomeMotion />
+      <StructuredData locale="zh" />
       <main className="motion-home">
         <section className="hero" aria-labelledby="hero-title">
           <div className="page-shell hero-grid">
             <div className="hero-copy">
               <p className="eyebrow"><span className="eyebrow-line" /> A LITTLE PHOTO, EVERY DAY</p>
-              <h1 id="hero-title">每天一张，<br />看见时间<span className="hero-emphasis">留下的变化。</span></h1>
-              <p className="hero-lede">从今天的一张相纸开始。回看走过的日子，也给未来的自己留一句话。</p>
+              <h1 id="hero-title">每天自拍，<br />看见自己<span className="hero-emphasis">慢慢变化。</span></h1>
+              <p className="hero-lede">每天留一张自拍，眼睛的位置交给 DailyChange 来对齐。等照片慢慢积攒起来，再把它们连成一段变化视频。</p>
               <div className="hero-actions">
                 <a className="button button-red" href={appStoreUrl}>前往 App Store 下载 <span aria-hidden="true">↗</span></a>
                 <a className="hero-secondary" href="#experience">认识 DailyChange <span aria-hidden="true">↓</span></a>
@@ -51,7 +54,7 @@ export default function HomePage() {
             <div className="chapter-copy">
               <div className="chapter-heading"><span className="chapter-number">01</span><span className="chapter-en">TODAY / 今天</span></div>
               <h2 id="today-title"><ScrollFloat>先把今天，</ScrollFloat><br /><ScrollFloat>好好留下。</ScrollFloat></h2>
-              <p>打开相机，为今天拍一张照片。写下相纸留言，让画面之外的心情也有地方安放。</p>
+              <p>打开相机，拍下今天的自己。DailyChange 在本机自动对齐双眼，让每一天的自拍更容易连起来看。</p>
               <div className="chapter-aside">一张相纸，记住此刻。</div>
             </div>
             <div className="chapter-media today-media"><span className="media-halo" aria-hidden="true" /><div className="chapter-screen"><TiltedCard amplitude={9}><AppScreen src="today-polaroid.jpg" alt="DailyChange 今天相纸界面的真实截图" /></TiltedCard></div><span className="media-caption">NO. 001 &nbsp; / &nbsp; TODAY</span></div>
@@ -75,7 +78,7 @@ export default function HomePage() {
             <div className="chapter-copy">
               <div className="chapter-heading"><span className="chapter-number">03</span><span className="chapter-en">TOMORROW / 明天</span></div>
               <h2 id="tomorrow-title"><ScrollFloat>给未来的自己，</ScrollFloat><br /><ScrollFloat>留一封信。</ScrollFloat></h2>
-              <p>写下此刻想说的话，交给未来的某一天。等那一天到来，再读一读过去的自己。</p>
+              <p>用 PRO 写下此刻想说的话，交给未来的某一天。等那一天到来，再读一读过去的自己。</p>
               <div className="chapter-aside">写给后来会读到的人。</div>
             </div>
             <div className="chapter-media tomorrow-media"><div className="chapter-screen"><TiltedCard amplitude={9}><AppScreen src="future-message.jpg" alt="DailyChange 写给未来自己的留言界面真实截图" /></TiltedCard></div><span className="media-caption">POSTMARK &nbsp; / &nbsp; TOMORROW</span></div>
@@ -84,7 +87,7 @@ export default function HomePage() {
 
         <section className="details-section">
           <div className="page-shell">
-            <div className="details-heading"><div><div className="section-tag">MORE THAN A PHOTO <span>·</span> 更多记录方式</div><h2><ScrollFloat>把日子，</ScrollFloat><br /><em><ScrollFloat>过得有形状。</ScrollFloat></em></h2></div><p>一点点装饰，一点点书写。照片之外的记忆，也值得收藏。</p></div>
+            <div className="details-heading"><div><div className="section-tag">MORE THAN A PHOTO <span>·</span> 更多记录方式</div><h2><ScrollFloat>把日子，</ScrollFloat><br /><em><ScrollFloat>过得有形状。</ScrollFloat></em></h2></div><p>用 PRO 制作贴纸、布置照片墙、写日记；基础功能也能导出变化视频。照片之外的记忆，也值得收藏。</p></div>
             <div className="detail-grid">
               <article className="detail-card"><TiltedCard className="detail-image"><img src={asset("/media/app/sticker-creation.jpg")} alt="DailyChange 贴纸制作界面的真实截图" loading="lazy" /></TiltedCard><span className="detail-count">01 / CREATE</span><h3>制作与使用贴纸</h3><p>让相纸多一点只属于你的细节。</p></article>
               <article className="detail-card"><TiltedCard className="detail-image"><img src={asset("/media/app/photo-wall.jpg")} alt="DailyChange 照片墙的真实截图" loading="lazy" /></TiltedCard><span className="detail-count">02 / COLLECT</span><h3>布置照片墙</h3><p>把喜欢的瞬间放在一起，慢慢铺满。</p></article>
@@ -93,6 +96,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        <HomeAnswers locale="zh" />
 
         <section className="closing-section">
           <div className="page-shell closing-grid">

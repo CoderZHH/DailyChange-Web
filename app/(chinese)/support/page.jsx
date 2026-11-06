@@ -1,15 +1,13 @@
+import { productQuestions } from "../../../lib/productQuestions";
 import { localeMetadata } from "../../../lib/localeMetadata";
 import SiteFooter from "../../../components/SiteFooter";
 import SiteHeader from "../../../components/SiteHeader";
 import { page } from "../../../lib/paths";
 
-export const metadata = {
-  ...localeMetadata("/support/", "zh"),
-  title: "帮助与反馈",
-  description: "DailyChange 使用帮助、常见问题与反馈邮箱。",
-};
+export const metadata = localeMetadata("/support/", "zh");
 
 const questions = [
+  ...productQuestions.zh,
   {
     title: "“一天一张”是怎样的规则？",
     answer: <>DailyChange 以每天一张相纸组成个人时间线。你可以在当天重新拍摄；新的照片会替换当天原有的记录。没有拍摄的日期会自然留白，不会补造一张照片。</>,
@@ -28,7 +26,7 @@ const questions = [
   },
   {
     title: "怎样导出照片或变化视频？",
-    answer: <>在 App 内打开对应的照片或导出入口，按界面提示保存到系统相册或分享。导出需要相应的照片权限和设备储存空间。如果保存失败，请先检查 iOS 的照片权限与可用空间，并在反馈时说明所用的导出入口。</>,
+    answer: <>在 App 内打开对应的照片或导出入口，按界面提示保存到系统相册。变化视频需要至少两张可用照片；在“过去”选择日期范围后预览并导出。导出需要相应的照片权限和设备储存空间。如果保存失败，请先检查 iOS 的照片权限与可用空间，并在反馈时说明所用的导出入口。</>,
   },
 ];
 
@@ -61,7 +59,7 @@ export default function SupportPage() {
         <section className="faq-section">
           <div className="page-shell faq-grid">
             <div className="faq-heading"><div className="section-tag">GOOD TO KNOW <span>·</span> 常见问题</div><h2>你可能还想知道。</h2><p>关于每天的记录、权限、备份和导出。</p></div>
-            <div className="faq-list">{questions.map((item, index) => <article className="faq-item" key={item.title}><span className="faq-index">0{index + 1}</span><div><h3>{item.title}</h3><p>{item.answer}</p></div></article>)}</div>
+            <div className="faq-list">{questions.map((item, index) => <article className="faq-item" key={item.title}><span className="faq-index">{String(index + 1).padStart(2, "0")}</span><div><h3>{item.title}</h3><p>{item.answer}</p></div></article>)}</div>
           </div>
         </section>
         <section className="support-bottom page-shell"><span>关于数据如何保存与删除</span><a href={page("/privacy/")}>阅读隐私政策 <span aria-hidden="true">↗</span></a></section>
