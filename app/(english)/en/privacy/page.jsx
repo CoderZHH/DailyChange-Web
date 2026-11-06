@@ -10,7 +10,7 @@ export const metadata = {
 };
 const email = "zhj1140351774@gmail.com";
 
-function Pending({ children, title = "To be confirmed before release" }) {
+function PolicyNote({ children, title = "Policy information" }) {
   return <div className="pending-note"><strong>{title}</strong><p>{children}</p></div>;
 }
 
@@ -68,7 +68,7 @@ export default function PrivacyPage() {
               <div className="policy-row"><h3>Notifications</h3><p>Notification permission is used for daily photo reminders you choose to enable.</p></div>
               <div className="policy-row"><h3>Photos</h3><p>When you choose to save an exported photo or change video, the App uses the relevant system photo-library permission to write that content to Photos.</p></div>
               <p>You can adjust these permissions in iOS Settings at any time. Disabling a permission may make the related feature unavailable.</p>
-              <Pending title="Version information">The single-photo deletion description was checked against the 1.1.4 release implementation. System permission prompts and iCloud management screens may vary by iOS version.</Pending>
+              <PolicyNote title="Version information">The single-photo deletion description was checked against the 1.1.4 release implementation. System permission prompts and iCloud management screens may vary by iOS version.</PolicyNote>
             </section>
             <section id="purchases" className="policy-section">
               <div className="policy-section-label">05 / PURCHASES</div><h2>Apple handles purchases</h2>
@@ -79,12 +79,12 @@ export default function PrivacyPage() {
               <div className="policy-row"><h3>Local records</h3><p>Records remain in the App’s private device storage without a fixed automatic expiry. You can choose Delete Photo from the More menu on Today’s print or in photo details and confirm deletion of that date’s photo and alignment record. Diary entries, notes, and stickers remain, and the system photo library is unaffected. Manage existing backups separately; restoring an older backup may bring the photo back. The app currently has no general delete-all-records control. A successful same-day retake replaces that day’s current record; old local photo files are cleaned up afterward. To remove the entire local library, fully delete the App from your device. Offloading an app keeps its data and is not equivalent to full deletion. System device backups, content exported to Photos, shared copies, and iCloud data must be managed separately.</p></div>
               <div className="policy-row"><h3>Permissions and backup</h3><p>You can disable permissions in iOS Settings and turn iCloud backup off in the App’s settings, under data and backup. Turning backup off stops future backup updates; it <strong>does not delete existing iCloud data</strong>.</p></div>
               <div className="policy-row"><h3>Existing iCloud data</h3><p>First turn off iCloud backup in the App to stop new copies. Then use iPhone Settings → [your name] → iCloud → Storage / Manage Account Storage to find and delete DailyChange’s stored app data, if the system offers that option. If DailyChange files are visible in iCloud Drive in the Files app, check their contents before removing the App’s “DailyChange Backup” folder and any older “DailyChange” backup folder, then review Recently Deleted. The current backup format can retain a current and a previous generation, so replacing a local photo does not immediately remove every older cloud copy. Deleting cloud data can affect other devices on your Apple Account. Review system device backups and exported Photos items separately. <a href="https://support.apple.com/guide/icloud/mm62d92d6b3e/icloud">See Apple’s guidance on third-party app data in iCloud</a>.</p></div>
-              <Pending title="Deletion steps still to be verified">The exact DailyChange iCloud deletion options on different iOS versions still need to be checked with the final App on a real device. If you cannot find the options above, contact the developer first to avoid deleting unrelated data.</Pending>
+              <PolicyNote title="iOS version differences">iCloud management options can differ across iOS versions. If you cannot find the options above, contact the developer first to avoid deleting unrelated data.</PolicyNote>
             </section>
             <section id="website" className="policy-section">
               <div className="policy-section-label">07 / THIS WEBSITE</div><h2>Website visits</h2>
               <p>This website serves static pages through GitHub Pages. When you visit a GitHub Pages site, GitHub logs visitor IP addresses for security purposes. See the <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">GitHub Pages documentation</a> and <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a> for details. This website does not add analytics, advertising tracking, third-party forms, or a cookie banner.</p>
-              <Pending title="Hosting information">GitHub Pages hosting has been confirmed. No analytics or advertising tracking tools are configured. The specific retention period for GitHub access logs has not been verified; GitHub’s Privacy Statement governs its processing.</Pending>
+              <PolicyNote title="Hosting information">GitHub Pages hosting has been confirmed. No analytics or advertising tracking tools are configured. The specific retention period for GitHub access logs has not been verified; GitHub’s Privacy Statement governs its processing.</PolicyNote>
             </section>
             <section id="contact" className="policy-section">
               <div className="policy-section-label">08 / CONTACT</div><h2>Contact and updates</h2>

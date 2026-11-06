@@ -1,0 +1,26 @@
+{
+  "observedAt": "2026-11-06T10:19:38.990748+00:00",
+  "endpoint": "https://api.indexnow.org/indexnow",
+  "urlCount": 14,
+  "urls": [
+    "https://coderzhh.github.io/DailyChange-Web/",
+    "https://coderzhh.github.io/DailyChange-Web/en/",
+    "https://coderzhh.github.io/DailyChange-Web/about/",
+    "https://coderzhh.github.io/DailyChange-Web/en/about/",
+    "https://coderzhh.github.io/DailyChange-Web/support/",
+    "https://coderzhh.github.io/DailyChange-Web/en/support/",
+    "https://coderzhh.github.io/DailyChange-Web/privacy/",
+    "https://coderzhh.github.io/DailyChange-Web/en/privacy/",
+    "https://coderzhh.github.io/DailyChange-Web/guides/",
+    "https://coderzhh.github.io/DailyChange-Web/en/guides/",
+    "https://coderzhh.github.io/DailyChange-Web/guides/daily-selfie/",
+    "https://coderzhh.github.io/DailyChange-Web/en/guides/daily-selfie/",
+    "https://coderzhh.github.io/DailyChange-Web/guides/selfie-timelapse/",
+    "https://coderzhh.github.io/DailyChange-Web/en/guides/selfie-timelapse/"
+  ],
+  "submitted": true,
+  "indexed": "not_verified",
+  "httpStatus": 202,
+  "response": "",
+  "ownershipValidationPending": true
+}

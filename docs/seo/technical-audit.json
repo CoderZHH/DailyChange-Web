@@ -1,0 +1,134 @@
+{
+  "publicPages": 14,
+  "sitemapUrls": 14,
+  "errors": [],
+  "scope": "Exported HTML, JSON-LD parse, dimensions, links/assets, canonical, hreflang, sitemap, reachability; not indexing, ranking, or rich-result eligibility",
+  "pages": [
+    {
+      "route": "/about/",
+      "title": "关于 DailyChange｜iPhone 每日自拍记录 App",
+      "canonical": [
+        "https://coderzhh.github.io/DailyChange-Web/about/"
+      ],
+      "linksFromHome": 1,
+      "structuredDataBlocks": 1
+    },
+    {
+      "route": "/en/about/",
+      "title": "About DailyChange | A Daily Selfie Journal for iPhone",
+      "canonical": [
+        "https://coderzhh.github.io/DailyChange-Web/en/about/"
+      ],
+      "linksFromHome": 2,
+      "structuredDataBlocks": 1
+    },
+    {
+      "route": "/en/guides/daily-selfie/",
+      "title": "How to keep a daily selfie journal with consistent alignment",
+      "canonical": [
+        "https://coderzhh.github.io/DailyChange-Web/en/guides/daily-selfie/"
+      ],
+      "linksFromHome": 2,
+      "structuredDataBlocks": 1
+    },
+    {
+      "route": "/en/guides/",
+      "title": "DailyChange Guides: Daily Selfies & Timelapse Videos",
+      "canonical": [
+        "https://coderzhh.github.io/DailyChange-Web/en/guides/"
+      ],
+      "linksFromHome": 2,
+      "structuredDataBlocks": 0
+    },
+    {
+      "route": "/en/guides/selfie-timelapse/",
+      "title": "How to turn daily selfies into a timelapse on iPhone",
+      "canonical": [
+        "https://coderzhh.github.io/DailyChange-Web/en/guides/selfie-timelapse/"
+      ],
+      "linksFromHome": 2,
+      "structuredDataBlocks": 1
+    },
+    {
+      "route": "/en/",
+      "title": "DailyChange | Daily Selfie Journal & Timelapse",
+      "canonical": [
+        "https://coderzhh.github.io/DailyChange-Web/en/"
+      ],
+      "linksFromHome": 1,
+      "structuredDataBlocks": 1
+    },
+    {
+      "route": "/en/privacy/",
+      "title": "Privacy Policy · DailyChange",
+      "canonical": [
+        "https://coderzhh.github.io/DailyChange-Web/en/privacy/"
+      ],
+      "linksFromHome": 2,
+      "structuredDataBlocks": 0
+    },
+    {
+      "route": "/en/support/",
+      "title": "DailyChange Help: Selfies, Exports & iCloud Backup",
+      "canonical": [
+        "https://coderzhh.github.io/DailyChange-Web/en/support/"
+      ],
+      "linksFromHome": 2,
+      "structuredDataBlocks": 0
+    },
+    {
+      "route": "/guides/daily-selfie/",
+      "title": "每天拍一张自拍，怎样更容易坚持和对齐？",
+      "canonical": [
+        "https://coderzhh.github.io/DailyChange-Web/guides/daily-selfie/"
+      ],
+      "linksFromHome": 1,
+      "structuredDataBlocks": 1
+    },
+    {
+      "route": "/guides/",
+      "title": "DailyChange 使用指南：每日自拍与变化视频",
+      "canonical": [
+        "https://coderzhh.github.io/DailyChange-Web/guides/"
+      ],
+      "linksFromHome": 1,
+      "structuredDataBlocks": 0
+    },
+    {
+      "route": "/guides/selfie-timelapse/",
+      "title": "怎样把每天的自拍连成变化视频？",
+      "canonical": [
+        "https://coderzhh.github.io/DailyChange-Web/guides/selfie-timelapse/"
+      ],
+      "linksFromHome": 1,
+      "structuredDataBlocks": 1
+    },
+    {
+      "route": "/",
+      "title": "DailyChange｜每日自拍、自动对齐与变化视频",
+      "canonical": [
+        "https://coderzhh.github.io/DailyChange-Web/"
+      ],
+      "linksFromHome": 0,
+      "structuredDataBlocks": 1
+    },
+    {
+      "route": "/privacy/",
+      "title": "隐私政策 · DailyChange",
+      "canonical": [
+        "https://coderzhh.github.io/DailyChange-Web/privacy/"
+      ],
+      "linksFromHome": 1,
+      "structuredDataBlocks": 0
+    },
+    {
+      "route": "/support/",
+      "title": "DailyChange 使用帮助：自拍、导出与 iCloud 备份",
+      "canonical": [
+        "https://coderzhh.github.io/DailyChange-Web/support/"
+      ],
+      "linksFromHome": 1,
+      "structuredDataBlocks": 0
+    }
+  ]
+}

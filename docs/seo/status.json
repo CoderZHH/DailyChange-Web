@@ -1,0 +1,123 @@
+{
+  "asOfDate": "2026-11-06",
+  "timeZone": "Asia/Shanghai",
+  "website": "https://coderzhh.github.io/DailyChange-Web/",
+  "deployedFeatureCommit": "4a6bf6397b0ad5385539293c3327ef46fdba85c8",
+  "deploymentRun": "https://github.com/CoderZHH/DailyChange-Web/actions/runs/42201520827",
+  "skills": {
+    "installed": true,
+    "names": [
+      "seo-audit",
+      "ai-seo",
+      "content-strategy",
+      "copywriting"
+    ],
+    "sourceRef": "88c79f6528a9347420e57ceb1fff9a60de651768"
+  },
+  "technical": {
+    "publicPages": 14,
+    "sitemapUrls": 14,
+    "auditErrors": 0,
+    "importantPagesWithinThreeLinks": true,
+    "viewportsChecked": [
+      320,
+      390,
+      1440
+    ]
+  },
+  "google": {
+    "verified": true,
+    "homepageState": "CRAWLED_CURRENTLY_NOT_INDEXED",
+    "lastHomepageCrawlLocal": "2026-11-06 17:25:10",
+    "crawler": "Googlebot smartphone",
+    "crawlAllowed": true,
+    "fetchSucceeded": true,
+    "sitemapReport": "COULD_NOT_FETCH",
+    "sitemapLiveInspection": "FETCH_SUCCEEDED",
+    "newPropertyTrafficReports": "processing",
+    "impressions": null,
+    "clicks": null
+  },
+  "indexnow": {
+    "httpStatus": 202,
+    "urlCount": 14,
+    "notificationAccepted": true,
+    "ownershipValidationPending": true,
+    "indexed": "not_verified"
+  },
+  "performance": {
+    "baseline": {
+      "reportUrl": "https://pagespeed.web.dev/analysis/https-coderzhh-github-io-DailyChange-Web/cspxt2n9ye?form_factor=mobile",
+      "reportedAtLocal": "2026-11-06 17:50",
+      "timeZone": "Asia/Shanghai",
+      "kind": "single Lighthouse lab run; no CrUX field data",
+      "scores": {
+        "performance": 69,
+        "accessibility": 91,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcpMs": 900,
+        "lcpMs": 15700,
+        "totalBlockingTimeMs": 20,
+        "cls": 0,
+        "speedIndexMs": 6800,
+        "networkKiB": 3296
+      },
+      "environment": "Lighthouse 13.6.0, simulated Moto G, slow 4G"
+    },
+    "after": {
+      "reportUrl": "https://pagespeed.web.dev/analysis/https-coderzhh-github-io-DailyChange-Web/rt6fj2luya?form_factor=mobile",
+      "reportedAtLocal": "2026-11-06 18:19",
+      "timeZone": "Asia/Shanghai",
+      "testedWebsiteCommit": "4a6bf6397b0ad5385539293c3327ef46fdba85c8",
+      "kind": "single Lighthouse lab run; no CrUX field data",
+      "scores": {
+        "performance": 91,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcpMs": 900,
+        "lcpMs": 3400,
+        "totalBlockingTimeMs": 20,
+        "cls": 0,
+        "speedIndexMs": 3200
+      },
+      "agentBrowsingChecks": {
+        "passed": 2,
+        "applicable": 2
+      },
+      "environment": "Lighthouse 13.6.0, simulated Moto G, slow 4G",
+      "limits": "One before/after run each, not a controlled experiment or field measurement; LCP still above 2.5s"
+    },
+    "note": "One lab run each, not field data or proof of causal ranking lift"
+  },
+  "aiVisibility": {
+    "status": "not_measured_login_required",
+    "completedAnswerSamples": 0,
+    "citationRate": null,
+    "promptPortfolioVersion": 1
+  },
+  "distribution": {
+    "communityDraftsPrepared": true,
+    "postsPublishedByAgent": false,
+    "independentCoverageObtained": false
+  },
+  "tracking": {
+    "bingWebmasterConnected": false,
+    "appStoreAcquisitionExported": false,
+    "websiteTrackingScriptsAdded": false,
+    "recurringAutomationCreated": false,
+    "followUp": "Resume checks and report when the user asks"
+  },
+  "nextActions": [
+    "Read Google indexing and sitemap state without repeated submission",
+    "Complete Bing Webmaster login when available, then read search and AI Performance",
+    "Run fixed prompts in authorized fresh AI sessions; retain engine, language, market and sample counts",
+    "Obtain explicit authorization before posting reviewed community drafts",
+    "Read real search queries and App Store acquisition before changing keyword priorities"
+  ]
+}

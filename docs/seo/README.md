@@ -4,6 +4,10 @@
 
 - [roadmap.md](roadmap.md)：路线、完成项、未解决问题及下一步验收条件。
 - [performance-baseline.json](performance-baseline.json)、[pagespeed-before.txt](pagespeed-before.txt)：Google 手机实验室性能基线；没有真实用户 CrUX 数据。
+- [performance-after.json](performance-after.json)、[pagespeed-after.txt](pagespeed-after.txt)：上线后的同条件手机复测。
+- [technical-audit.json](technical-audit.json)：14页导出检查的结果与范围。
+- [google-index-observation.json](google-index-observation.json)：Google 正式抓取成功但尚未索引的原始观察。
+- [indexnow-receipt.json](indexnow-receipt.json)：参与引擎收到14页通知，202验证待处理，不等同收录。
 - [asset-savings.json](asset-savings.json)：真实文件体积对比，不等于加载时间的同幅下降。
 - [ai-baseline.json](ai-baseline.json)：匿名 AI 查询实际结果；要求登录时记为未测。
 - [prompt-portfolio.csv](prompt-portfolio.csv)：固定中英文问题组合，区分品牌、需求、风险、价格与负对照。

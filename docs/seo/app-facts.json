@@ -1,0 +1,15 @@
+{
+  "observedOn": "2026-11-06",
+  "sources": [
+    "https://itunes.apple.com/lookup?id=6815276277&country=cn",
+    "https://itunes.apple.com/lookup?id=6815276277&country=us"
+  ],
+  "version": "1.1.4",
+  "sellerName": "航杰 张",
+  "minimumOsVersion": "17.0",
+  "localizedNames": {
+    "cn": "DailyChange",
+    "us": "DailyChange: A Photo a Day"
+  },
+  "note": "Public Apple store lookup; seller display name is not an independent legal-entity verification"
+}

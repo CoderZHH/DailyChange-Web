@@ -132,7 +132,7 @@ a:focus-visible { outline: 3px solid var(--red); outline-offset: 5px; border-rad
 .manifesto { position: relative; padding-block: 125px 132px; text-align: center; }
 .manifesto p { margin: 25px auto 0; font-family: "Songti SC", "STSong", serif; font-size: clamp(34px, 4.4vw, 62px); line-height: 1.45; letter-spacing: -.06em; }
 .manifesto em, .details-heading em, .closing-section em, .interior-hero em { color: var(--red); font-style: normal; }
-.manifesto-side { position: absolute; right: 0; bottom: 40px; color: var(--muted); font-size: 11px; line-height: 1.6; letter-spacing: .16em; text-align: left; }
+.manifesto-side { position: absolute; right: 0; bottom: 40px; color: var(--ink); font-size: 11px; line-height: 1.6; letter-spacing: .16em; text-align: left; }
 
 .chapter { overflow: hidden; }
 .chapter-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); align-items: center; min-height: 720px; gap: 9%; }
