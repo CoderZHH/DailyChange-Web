@@ -8,7 +8,7 @@ export default function SiteHeader({ locale = "zh", currentPath = "/" }) {
     <header className="site-header">
       <div className="site-header-inner page-shell">
         <a className="brand" href={page(`${prefix}/`)} aria-label={english ? "DailyChange home" : "DailyChange 首页"}>
-          <img src={asset("/media/brand/app-icon.png")} width="42" height="42" alt="" />
+          <img src={asset("/media/brand/app-icon-192.webp")} width="42" height="42" alt="" />
           <span>DailyChange</span>
         </a>
         <nav className="primary-nav" aria-label={english ? "Main navigation" : "主导航"}>

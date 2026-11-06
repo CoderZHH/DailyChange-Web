@@ -1,3 +1,4 @@
+import { appImage } from "../../lib/imageAssets";
 import StructuredData from "../../components/StructuredData";
 import HomeAnswers from "../../components/HomeAnswers";
 import { localeMetadata } from "../../lib/localeMetadata";
@@ -35,8 +36,8 @@ export default function HomePage() {
             <div className="hero-art" aria-label="DailyChange 的真实 App 界面截图">
               <span className="hero-art-orbit" aria-hidden="true" />
               <span className="hero-art-note" aria-hidden="true">给今天<br />留一张。</span>
-              <div className="hero-photo-back"><img src={asset("/media/app/past-calendar.jpg")} width="1278" height="2778" alt="" /></div>
-              <div className="hero-photo-front"><img src={asset("/media/app/today-polaroid.jpg")} width="1278" height="2778" alt="今天相纸的真实 App 截图" /></div>
+              <div className="hero-photo-back"><img {...appImage("past-calendar.jpg")} alt="" /></div>
+              <div className="hero-photo-front"><img fetchPriority="high" {...appImage("today-polaroid.jpg")} alt="今天相纸的真实 App 截图" /></div>
               <span className="hero-art-stamp" aria-hidden="true">KEEP THE DAY<br />DAILYCHANGE</span>
             </div>
           </div>
@@ -89,10 +90,10 @@ export default function HomePage() {
           <div className="page-shell">
             <div className="details-heading"><div><div className="section-tag">MORE THAN A PHOTO <span>·</span> 更多记录方式</div><h2><ScrollFloat>把日子，</ScrollFloat><br /><em><ScrollFloat>过得有形状。</ScrollFloat></em></h2></div><p>用 PRO 制作贴纸、布置照片墙、写日记；基础功能也能导出变化视频。照片之外的记忆，也值得收藏。</p></div>
             <div className="detail-grid">
-              <article className="detail-card"><TiltedCard className="detail-image"><img src={asset("/media/app/sticker-creation.jpg")} alt="DailyChange 贴纸制作界面的真实截图" loading="lazy" /></TiltedCard><span className="detail-count">01 / CREATE</span><h3>制作与使用贴纸</h3><p>让相纸多一点只属于你的细节。</p></article>
-              <article className="detail-card"><TiltedCard className="detail-image"><img src={asset("/media/app/photo-wall.jpg")} alt="DailyChange 照片墙的真实截图" loading="lazy" /></TiltedCard><span className="detail-count">02 / COLLECT</span><h3>布置照片墙</h3><p>把喜欢的瞬间放在一起，慢慢铺满。</p></article>
-              <article className="detail-card"><TiltedCard className="detail-image"><img src={asset("/media/app/diary.jpg")} alt="DailyChange 日记界面的真实截图" loading="lazy" /></TiltedCard><span className="detail-count">03 / WRITE</span><h3>写一页日记</h3><p>把照片没有说完的故事写下来。</p></article>
-              <article className="detail-card"><TiltedCard className="detail-image"><img src={asset("/media/app/video-export.jpg")} alt="DailyChange 变化视频导出界面的真实截图" loading="lazy" /></TiltedCard><span className="detail-count">04 / REVISIT</span><h3>导出变化视频</h3><p>让一张张照片，连成看得见的时间。</p></article>
+              <article className="detail-card"><TiltedCard className="detail-image"><img {...appImage("sticker-creation.jpg")} alt="DailyChange 贴纸制作界面的真实截图" loading="lazy" /></TiltedCard><span className="detail-count">01 / CREATE</span><h3>制作与使用贴纸</h3><p>让相纸多一点只属于你的细节。</p></article>
+              <article className="detail-card"><TiltedCard className="detail-image"><img {...appImage("photo-wall.jpg")} alt="DailyChange 照片墙的真实截图" loading="lazy" /></TiltedCard><span className="detail-count">02 / COLLECT</span><h3>布置照片墙</h3><p>把喜欢的瞬间放在一起，慢慢铺满。</p></article>
+              <article className="detail-card"><TiltedCard className="detail-image"><img {...appImage("diary.jpg")} alt="DailyChange 日记界面的真实截图" loading="lazy" /></TiltedCard><span className="detail-count">03 / WRITE</span><h3>写一页日记</h3><p>把照片没有说完的故事写下来。</p></article>
+              <article className="detail-card"><TiltedCard className="detail-image"><img {...appImage("video-export.jpg")} alt="DailyChange 变化视频导出界面的真实截图" loading="lazy" /></TiltedCard><span className="detail-count">04 / REVISIT</span><h3>导出变化视频</h3><p>让一张张照片，连成看得见的时间。</p></article>
             </div>
           </div>
         </section>
@@ -102,7 +103,7 @@ export default function HomePage() {
         <section className="closing-section">
           <div className="page-shell closing-grid">
             <div><p className="eyebrow">A NOTE TO YOUR FUTURE SELF</p><h2><ScrollFloat>未来的你，</ScrollFloat><br /><ScrollFloat>会感谢今天</ScrollFloat><br /><em><ScrollFloat>留下这一张。</ScrollFloat></em></h2><p>DailyChange 在 iPhone 上，陪你认真收藏每一天。</p></div>
-            <div className="closing-card"><img src={asset("/media/brand/app-icon.png")} width="94" height="94" alt="DailyChange App 图标" /><span className="closing-card-title">DailyChange</span><span>每天一张 · 个人记录 App</span><a className="store-link" href={appStoreUrl}>在 App Store 下载 <span aria-hidden="true">↗</span></a><small>iPhone App · 实际可用地区以你的 App Store 为准。</small></div>
+            <div className="closing-card"><img src={asset("/media/brand/app-icon-192.webp")} width="94" height="94" alt="DailyChange App 图标" /><span className="closing-card-title">DailyChange</span><span>每天一张 · 个人记录 App</span><a className="store-link" href={appStoreUrl}>在 App Store 下载 <span aria-hidden="true">↗</span></a><small>iPhone App · 实际可用地区以你的 App Store 为准。</small></div>
           </div>
         </section>
       </main>

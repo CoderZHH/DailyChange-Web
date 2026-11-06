@@ -1,5 +1,11 @@
 # DailyChange 官方网站
 
+每天留一张自拍，过些日子，再把它们连起来看。DailyChange 是 iPhone 上的每日自拍记录 App，在设备上对齐双眼，把真实照片导出为变化视频，也用相纸、日历和文字留下日常。
+
+DailyChange is a daily selfie journal for iPhone with on-device eye alignment, a photo calendar, and timelapse export. Daily photos, imports, browsing, and video export are Basic features; optional PRO purchases add writing and creative tools.
+
+[App Store 下载 / Download](https://apps.apple.com/app/id6815276277) · [中文官网](https://coderzhh.github.io/DailyChange-Web/) · [English website](https://coderzhh.github.io/DailyChange-Web/en/) · [使用指南](https://coderzhh.github.io/DailyChange-Web/guides/) · [About DailyChange](https://coderzhh.github.io/DailyChange-Web/en/about/)
+
 公开发布的 DailyChange iOS App 官网。中文页面包括首页、帮助、隐私及 `/guides/` 下的使用指南；英文页面位于对应的 `/en/` 路径，使用 Next.js 静态导出并部署到 GitHub Pages。网站不需要后端、账号或数据库。
 
 线上地址：https://coderzhh.github.io/DailyChange-Web/
@@ -39,7 +45,6 @@ npm run build
 - 正式 iOS 版本的地点和其他权限行为。人脸关键点与构图参数的本地保存、视频导出用途及可选 iCloud 备份已按 2026-09-26 的 App 代码核实，官网隐私政策已同步。
 - 正式版本中删除既有 iCloud 数据的系统入口。
 - GitHub 访问日志的具体保存期限（托管已确认为 GitHub Pages，未配置统计工具）。
-- App Store 正式下载链接。
 
 反馈邮箱 `zhj1140351774@gmail.com` 已由产品方确认。
 
@@ -53,3 +58,12 @@ Google Search Console 应添加 URL 前缀资源 `https://coderzhh.github.io/Dai
 GitHub Pages 是项目子路径，robots.txt 只有放在 `https://coderzhh.github.io/robots.txt` 才适用；本仓库不控制域名根目录，因此不生成无效的子目录 robots.txt。缺少 robots.txt 默认不阻止抓取。不需要为 GEO 编造专用 schema、评分或 llms.txt。
 
 每周看 Search Console 的展示、点击、查询词与落地页；Bing 的 AI Performance 只覆盖其支持的 AI 产品。外部 AI 可见度工具依赖抽样问题，不能代表所有用户的真实问答。部署改域名或 basePath 时，同步更新 `lib/localeMetadata.js`、workflow、搜索后台与 sitemap。
+
+
+## 发布质量检查
+
+品牌图与截图保留源文件，页面使用 WebP 和响应式截图以降低移动网络传输量。更新源图后运行 `npm run images:optimize`，再提交生成的图片。已有站点视觉与 App Store 媒体不随此步骤改变。
+
+构建后运行 `python3 scripts/audit-seo.py --base-path /DailyChange-Web`（无 basePath 的本地构建不传此参数）。检查逐页 canonical、语言互链、重复标题、站点地图覆盖、结构化数据解析及所有站内链接与资源；GitHub Pages 发布流程也执行此检查。
+
+产品与文案上下文见 `product-marketing-context.md`。搜索效果记录需区分“未测”“无数据”和实际的零展示／零引用；Lighthouse SEO 满分不代表已经收录或拥有排名。

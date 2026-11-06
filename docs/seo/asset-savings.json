@@ -1,0 +1,33 @@
+{
+  "scope": "File-size comparison; not a claim about measured page load time",
+  "images": [
+    {
+      "source": "brand/app-icon.png",
+      "served": "brand/app-icon-192.webp",
+      "sourceBytes": 1923903,
+      "servedBytes": 8862,
+      "reductionPercent": 99.54
+    },
+    {
+      "source": "brand/dailychange-wordmark-wide.png",
+      "served": "brand/dailychange-wordmark-wide.webp",
+      "sourceBytes": 673930,
+      "servedBytes": 37296,
+      "reductionPercent": 94.47
+    },
+    {
+      "source": "app/today-polaroid.jpg",
+      "served": "app/today-polaroid-960.webp",
+      "sourceBytes": 238100,
+      "servedBytes": 106974,
+      "reductionPercent": 55.07
+    },
+    {
+      "source": "app/past-calendar.jpg",
+      "served": "app/past-calendar-960.webp",
+      "sourceBytes": 292164,
+      "servedBytes": 142200,
+      "reductionPercent": 51.33
+    }
+  ]
+}

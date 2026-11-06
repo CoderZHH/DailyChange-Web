@@ -25,7 +25,8 @@ export default function ScrollFloat({ children, className = "", as: Tag = "span"
   const text = /[a-zA-Z]/.test(children)
     ? children.split(/(\s+)/).map((word, i) => /\s/.test(word) ? " " : <span className="float-word" key={i}>{characters(word, `${i}-`)}</span>)
     : characters(children);
-  return <Tag ref={ref} className={`scroll-float ${className}`} aria-label={children}>
+  return <Tag ref={ref} className={`scroll-float ${className}`}>
+    <span className="sr-only">{children}</span>
     <span aria-hidden="true">{text}</span>
   </Tag>;
 }

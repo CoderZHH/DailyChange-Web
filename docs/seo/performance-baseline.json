@@ -1,0 +1,21 @@
+{
+  "reportUrl": "https://pagespeed.web.dev/analysis/https-coderzhh-github-io-DailyChange-Web/cspxt2n9ye?form_factor=mobile",
+  "reportedAtLocal": "2026-11-06 17:50",
+  "timeZone": "Asia/Shanghai",
+  "kind": "single Lighthouse lab run; no CrUX field data",
+  "scores": {
+    "performance": 69,
+    "accessibility": 91,
+    "bestPractices": 100,
+    "seo": 100
+  },
+  "metrics": {
+    "fcpMs": 900,
+    "lcpMs": 15700,
+    "totalBlockingTimeMs": 20,
+    "cls": 0,
+    "speedIndexMs": 6800,
+    "networkKiB": 3296
+  },
+  "environment": "Lighthouse 13.6.0, simulated Moto G, slow 4G"
+}

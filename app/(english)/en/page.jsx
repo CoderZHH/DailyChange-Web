@@ -1,3 +1,4 @@
+import { appImage } from "../../../lib/imageAssets";
 import StructuredData from "../../../components/StructuredData";
 import HomeAnswers from "../../../components/HomeAnswers";
 import { localeMetadata } from "../../../lib/localeMetadata";
@@ -35,8 +36,8 @@ export default function HomePage() {
             <div className="hero-art" aria-label="Actual DailyChange screenshots, shown in Chinese">
               <span className="hero-art-orbit" aria-hidden="true" />
               <span className="hero-art-note" aria-hidden="true">Keep<br />today.</span>
-              <div className="hero-photo-back"><img src={asset("/media/app/past-calendar.jpg")} width="1278" height="2778" alt="" /></div>
-              <div className="hero-photo-front"><img src={asset("/media/app/today-polaroid.jpg")} width="1278" height="2778" alt="Today’s photo in DailyChange (Chinese interface)" /></div>
+              <div className="hero-photo-back"><img {...appImage("past-calendar.jpg")} alt="" /></div>
+              <div className="hero-photo-front"><img fetchPriority="high" {...appImage("today-polaroid.jpg")} alt="Today’s photo in DailyChange (Chinese interface)" /></div>
               <span className="hero-art-stamp" aria-hidden="true">KEEP THE DAY<br />DAILYCHANGE</span>
             </div>
           </div>
@@ -91,10 +92,10 @@ export default function HomePage() {
           <div className="page-shell">
             <div className="details-heading"><div><div className="section-tag">MORE THAN A PHOTO <span>·</span> MAKE IT YOURS</div><h2><ScrollFloat>Give your days</ScrollFloat><br /><em><ScrollFloat>a little shape.</ScrollFloat></em></h2></div><p>A little decorating. A little writing. The memories beyond the photo deserve a place, too.</p></div>
             <div className="detail-grid">
-              <article className="detail-card"><TiltedCard className="detail-image"><img src={asset("/media/app/sticker-creation.jpg")} alt="DailyChange sticker creation (Chinese interface)" loading="lazy" /></TiltedCard><span className="detail-count">01 / CREATE</span><h3>Make and use stickers</h3><p>Give your photo prints a touch that’s yours.</p></article>
-              <article className="detail-card"><TiltedCard className="detail-image"><img src={asset("/media/app/photo-wall.jpg")} alt="DailyChange photo wall (Chinese interface)" loading="lazy" /></TiltedCard><span className="detail-count">02 / COLLECT</span><h3>Build a photo wall</h3><p>Bring your favorite moments together, one by one.</p></article>
-              <article className="detail-card"><TiltedCard className="detail-image"><img src={asset("/media/app/diary.jpg")} alt="DailyChange diary (Chinese interface)" loading="lazy" /></TiltedCard><span className="detail-count">03 / WRITE</span><h3>Write a diary entry</h3><p>Write the part of the story a photo can’t tell.</p></article>
-              <article className="detail-card"><TiltedCard className="detail-image"><img src={asset("/media/app/video-export.jpg")} alt="DailyChange change video export (Chinese interface)" loading="lazy" /></TiltedCard><span className="detail-count">04 / REVISIT</span><h3>Export a change video</h3><p>Turn your photos into a video of change over time.</p></article>
+              <article className="detail-card"><TiltedCard className="detail-image"><img {...appImage("sticker-creation.jpg")} alt="DailyChange sticker creation (Chinese interface)" loading="lazy" /></TiltedCard><span className="detail-count">01 / CREATE</span><h3>Make and use stickers</h3><p>Give your photo prints a touch that’s yours.</p></article>
+              <article className="detail-card"><TiltedCard className="detail-image"><img {...appImage("photo-wall.jpg")} alt="DailyChange photo wall (Chinese interface)" loading="lazy" /></TiltedCard><span className="detail-count">02 / COLLECT</span><h3>Build a photo wall</h3><p>Bring your favorite moments together, one by one.</p></article>
+              <article className="detail-card"><TiltedCard className="detail-image"><img {...appImage("diary.jpg")} alt="DailyChange diary (Chinese interface)" loading="lazy" /></TiltedCard><span className="detail-count">03 / WRITE</span><h3>Write a diary entry</h3><p>Write the part of the story a photo can’t tell.</p></article>
+              <article className="detail-card"><TiltedCard className="detail-image"><img {...appImage("video-export.jpg")} alt="DailyChange change video export (Chinese interface)" loading="lazy" /></TiltedCard><span className="detail-count">04 / REVISIT</span><h3>Export a change video</h3><p>Turn your photos into a video of change over time.</p></article>
             </div>
           </div>
         </section>
@@ -104,7 +105,7 @@ export default function HomePage() {
         <section className="closing-section">
           <div className="page-shell closing-grid">
             <div><p className="eyebrow">A NOTE TO YOUR FUTURE SELF</p><h2><ScrollFloat>Your future self</ScrollFloat><br /><ScrollFloat>will be glad</ScrollFloat><br /><em><ScrollFloat>you kept today.</ScrollFloat></em></h2><p>DailyChange for iPhone. A place for the days you want to keep.</p></div>
-            <div className="closing-card"><img src={asset("/media/brand/app-icon.png")} width="94" height="94" alt="DailyChange app icon" /><span className="closing-card-title">DailyChange</span><span>One photo a day · A personal journal</span><a className="store-link" href={appStoreUrl}>Download on the App Store <span aria-hidden="true">↗</span></a><small>iPhone app · Availability depends on your App Store region.</small></div>
+            <div className="closing-card"><img src={asset("/media/brand/app-icon-192.webp")} width="94" height="94" alt="DailyChange app icon" /><span className="closing-card-title">DailyChange</span><span>One photo a day · A personal journal</span><a className="store-link" href={appStoreUrl}>Download on the App Store <span aria-hidden="true">↗</span></a><small>iPhone app · Availability depends on your App Store region.</small></div>
           </div>
         </section>
       </main>

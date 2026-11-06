@@ -1,9 +1,9 @@
-import { asset } from "../lib/paths";
+import { appImage } from "../lib/imageAssets";
 
 export default function AppScreen({ src, alt, className = "" }) {
   return (
     <figure className={`app-screen ${className}`}>
-      <img src={asset(`/media/app/${src}`)} alt={alt} loading="lazy" />
+      <img {...appImage(src)} alt={alt} loading="lazy" />
     </figure>
   );
 }

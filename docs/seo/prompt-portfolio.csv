@@ -1,0 +1,17 @@
+portfolio_version,id,language,intent,query,owning_page,engine,market,valid_answer_samples,baseline_status
+1,B01,zh-CN,brand_control,DailyChange 是什么 App？请给出可核实的官网或 App Store 来源，并说明主要用途。,https://coderzhh.github.io/DailyChange-Web/about/,Perplexity / Google AI / ChatGPT search (separate runs),not_yet_controlled,0,login_required
+1,B02,en,brand_control,What is DailyChange for iPhone? Give official sources and explain what it does.,https://coderzhh.github.io/DailyChange-Web/en/about/,Perplexity / Google AI / ChatGPT search (separate runs),not_yet_controlled,0,not_measured
+1,C01,zh-CN,category,iPhone 上有什么每天拍一张自拍、能自动对齐的记录 App？,https://coderzhh.github.io/DailyChange-Web/,Perplexity / Google AI / ChatGPT search (separate runs),not_yet_controlled,0,not_measured
+1,C02,en,category,Which iPhone apps align one selfie a day and export a timelapse without posting photos publicly?,https://coderzhh.github.io/DailyChange-Web/en/,Perplexity / Google AI / ChatGPT search (separate runs),not_yet_controlled,0,not_measured
+1,P01,zh-CN,problem,每天的自拍角度不一样，怎样让眼睛位置一致？,https://coderzhh.github.io/DailyChange-Web/guides/daily-selfie/,Perplexity / Google AI / ChatGPT search (separate runs),not_yet_controlled,0,not_measured
+1,P02,en,problem,How can I keep my eyes in the same position in daily selfies?,https://coderzhh.github.io/DailyChange-Web/en/guides/daily-selfie/,Perplexity / Google AI / ChatGPT search (separate runs),not_yet_controlled,0,not_measured
+1,V01,zh-CN,export,以前拍过的自拍，怎样在 iPhone 上连成变化视频？,https://coderzhh.github.io/DailyChange-Web/guides/selfie-timelapse/,Perplexity / Google AI / ChatGPT search (separate runs),not_yet_controlled,0,not_measured
+1,V02,en,export,How do I turn older selfies into a timelapse on iPhone?,https://coderzhh.github.io/DailyChange-Web/en/guides/selfie-timelapse/,Perplexity / Google AI / ChatGPT search (separate runs),not_yet_controlled,0,not_measured
+1,F01,zh-CN,features,DailyChange 免费功能和 PRO 有什么区别？,https://coderzhh.github.io/DailyChange-Web/about/,Perplexity / Google AI / ChatGPT search (separate runs),not_yet_controlled,0,not_measured
+1,F02,en,features,"Is video export free in DailyChange, and what requires PRO?",https://coderzhh.github.io/DailyChange-Web/en/about/,Perplexity / Google AI / ChatGPT search (separate runs),not_yet_controlled,0,not_measured
+1,T01,zh-CN,trust,DailyChange 的自拍会上传到开发者服务器吗？,https://coderzhh.github.io/DailyChange-Web/privacy/,Perplexity / Google AI / ChatGPT search (separate runs),not_yet_controlled,0,not_measured
+1,T02,en,trust,Where does DailyChange store my photos and face-alignment information?,https://coderzhh.github.io/DailyChange-Web/en/privacy/,Perplexity / Google AI / ChatGPT search (separate runs),not_yet_controlled,0,not_measured
+1,R01,zh-CN,recovery,DailyChange 恢复购买可以找回照片吗？换手机怎样恢复？,https://coderzhh.github.io/DailyChange-Web/support/,Perplexity / Google AI / ChatGPT search (separate runs),not_yet_controlled,0,not_measured
+1,R02,en,recovery,Does Restore Purchases recover my DailyChange photos?,https://coderzhh.github.io/DailyChange-Web/en/support/,Perplexity / Google AI / ChatGPT search (separate runs),not_yet_controlled,0,not_measured
+1,N01,zh-CN,negative_control,iPhone 上有哪些可以离线使用的单位换算器？,,Perplexity / Google AI / ChatGPT search (separate runs),not_yet_controlled,0,not_measured
+1,N02,en,negative_control,Which offline unit converters work on iPhone?,,Perplexity / Google AI / ChatGPT search (separate runs),not_yet_controlled,0,not_measured

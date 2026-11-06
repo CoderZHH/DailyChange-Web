@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/coreyhaines31/marketingskills",
+  "ref": "88c79f6528a9347420e57ceb1fff9a60de651768",
+  "installedOn": "2026-11-06",
+  "skills": [
+    "seo-audit",
+    "ai-seo",
+    "content-strategy",
+    "copywriting"
+  ],
+  "installationRoot": "/Users/zhh/.codex/skills",
+  "policy": "Official platform documentation takes priority over vendor statistics; no invented results, ratings or claims."
+}
