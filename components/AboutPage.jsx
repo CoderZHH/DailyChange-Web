@@ -1,10 +1,10 @@
 import SiteHeader from "./SiteHeader";
 import SiteFooter from "./SiteFooter";
-import { JsonLd } from "./StructuredData";
+import { appEntityId, JsonLd } from "./StructuredData";
 import { GuideLinks } from "./GuidePages";
 import { absoluteUrl } from "../lib/localeMetadata";
 import { page } from "../lib/paths";
-import { appStoreUrl } from "../lib/appStore";
+import { appStoreId, appStoreListings, appStoreUrl } from "../lib/appStore";
 
 const copy = {
   zh: {
@@ -29,7 +29,8 @@ const copy = {
     privacyTitle: "照片保存在哪里",
     privacy: "照片、文字与对齐信息保存在设备上。开启可选 iCloud 备份后，副本存入你自己的 iCloud，不上传到开发者服务器。请留意备份完成状态；恢复购买只恢复购买权益，不能找回没有备份的照片。",
     sourceTitle: "这些说明由谁维护",
-    source: "App Store 公开开发者名称为“航杰 张”。本页与使用指南由 DailyChange 官网维护，按 App 的功能实现和商店资料核对。截图来自真实 App；功能、购买与地区供应以当前 App 和 App Store 为准。这里不展示未经核实的下载量、评分或用户评价。",
+    source: "App Store 公开开发者名称为“航杰 张”。本页与使用指南由 DailyChange 官网维护，按 App 的功能实现和商店资料核对。截图来自真实 App；功能、购买与地区供应以当前 App 和 App Store 为准。",
+    storeSources: ["中国大陆 App Store", "美国 App Store"],
     date: "资料更新：2026 年 11 月 6 日", guides: "使用指南", contact: "联系开发者", privacyLink: "阅读隐私政策", download: "在 App Store 查看 DailyChange",
   },
   en: {
@@ -54,7 +55,8 @@ const copy = {
     privacyTitle: "Where your records stay",
     privacy: "Photos, writing, and alignment information are stored on your device. If you enable optional backups, copies go to your own iCloud, not developer servers. Check that your backup has completed. Restore Purchases restores purchase access; it cannot recover photos without an available backup.",
     sourceTitle: "Who maintains this information",
-    source: "The developer name displayed on the App Store is 航杰 张. This page and the guides are maintained for the official DailyChange website and checked against the app’s implementation and store information. Screenshots show the real app. Features, purchases, and regional availability depend on the current app and App Store. We do not display unverified download counts, ratings, or testimonials.",
+    source: "The developer name displayed on the App Store is 航杰 张. This page and the guides are maintained for the official DailyChange website and checked against the app’s implementation and store information. Screenshots show the real app. Features, purchases, and regional availability depend on the current app and App Store.",
+    storeSources: ["App Store in mainland China", "App Store in the United States"],
     date: "Information updated November 6, 2026", guides: "Using DailyChange", contact: "Contact the developer", privacyLink: "Read the privacy policy", download: "View DailyChange on the App Store",
   },
 };
@@ -64,12 +66,18 @@ export default function AboutPage({ locale = "zh" }) {
   const data = copy[locale];
   const url = absoluteUrl(`${prefix}/about/`);
   return <><SiteHeader locale={locale} currentPath="/about/" /><main className={`interior-main guide-main ${english ? "english-interior" : ""}`}>
-    <JsonLd data={{ "@context": "https://schema.org", "@type": "AboutPage", url, name: data.title, inLanguage: english ? "en" : "zh-CN", about: { "@id": `${absoluteUrl(`${prefix}/`)}#app` }, publisher: { "@type": "Organization", name: "DailyChange", url: absoluteUrl(`${prefix}/`), email: "zhj1140351774@gmail.com", sameAs: [appStoreUrl] } }} />
+    <JsonLd data={{ "@context": "https://schema.org", "@type": "AboutPage", url, name: data.title, inLanguage: english ? "en" : "zh-CN", about: { "@id": appEntityId }, publisher: { "@type": "Organization", name: "DailyChange", url: absoluteUrl(`${prefix}/`), email: "zhj1140351774@gmail.com" } }} />
     <article className="page-shell guide-article"><header className="guide-hero"><p className="eyebrow">DAILYCHANGE / {english ? "THE APP" : "产品资料"}</p><h1>{data.title}</h1><p className="guide-intro">{data.intro}</p><p className="guide-byline">{data.date}</p><a className="button button-red" href={appStoreUrl}>{data.download}</a></header><div className="guide-body">
     {data.sections.map(([title, text]) => <section key={title}><h2>{title}</h2><p>{text}</p></section>)}
     <section><h2>{data.plansTitle}</h2><p>{data.plansIntro}</p><table className="feature-table"><thead><tr>{data.headers.map(text => <th key={text} scope="col">{text}</th>)}</tr></thead><tbody>{data.rows.map(row => <tr key={row[0]}><th scope="row">{row[0]}</th><td>{row[1]}</td><td>{row[2]}</td></tr>)}</tbody></table><p>{data.pricing}</p></section>
     <section><h2>{data.privacyTitle}</h2><p>{data.privacy}</p><a className="text-link" href={page(`${prefix}/privacy/`)}>{data.privacyLink}</a></section>
-    <section><h2>{data.sourceTitle}</h2><p>{data.source}</p><a className="text-link" href="mailto:zhj1140351774@gmail.com">{data.contact}: zhj1140351774@gmail.com</a></section>
+    <section>
+      <h2>{data.sourceTitle}</h2>
+      <p>{data.source}</p>
+      <p>App Store ID {appStoreId}</p>
+      <p><a className="text-link" href={appStoreListings.zh}>{data.storeSources[0]}</a>{" · "}<a className="text-link" href={appStoreListings.en}>{data.storeSources[1]}</a></p>
+      <a className="text-link" href="mailto:zhj1140351774@gmail.com">{data.contact}: zhj1140351774@gmail.com</a>
+    </section>
     <section><h2>{data.guides}</h2><GuideLinks locale={locale} /></section>
     </div></article></main><SiteFooter locale={locale} /></>;
 }
