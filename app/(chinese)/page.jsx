@@ -12,7 +12,10 @@ import SiteHeader from "../../components/SiteHeader";
 import { asset } from "../../lib/paths";
 import { appStoreUrl } from "../../lib/appStore";
 
-export const metadata = localeMetadata("/", "zh");
+export const metadata = {
+  ...localeMetadata("/", "zh"),
+  verification: { other: { "msvalidate.01": "45CBF9A17D971A0322BBDA0DFDAA450B" } },
+};
 
 export default function HomePage() {
   return (
