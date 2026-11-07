@@ -99,6 +99,8 @@ def main():
         if parsed.scheme not in ('http', 'https') or parsed.netloc != urlparse(origin).netloc:
             return None, None
         path = unquote(parsed.path)
+        if args.homepage_url and path == urlparse(args.homepage_url).path:
+            return root, '/'
         if base and not (path == base or path.startswith(base + '/')):
             return None, None
         relative = path[len(base):] if base else path
