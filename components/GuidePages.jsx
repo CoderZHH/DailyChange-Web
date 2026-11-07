@@ -14,7 +14,31 @@ export function GuideLinks({ locale = "zh" }) {
 export function GuideIndex({ locale = "zh" }) {
   const english = locale === "en";
   const copy = guideIndexCopy[locale];
-  return <><SiteHeader locale={locale} currentPath="/guides/" /><main className={`interior-main guide-main ${english ? "english-interior" : ""}`}><section className="page-shell guide-hero"><p className="eyebrow">ONE DAY AT A TIME</p><h1>{english ? "A little help\ngetting started." : "从今天，\n慢慢留下来。"}</h1><p className="interior-intro">{copy.description}</p><GuideLinks locale={locale} /></section></main><SiteFooter locale={locale} /></>;
+  return <>
+    <SiteHeader locale={locale} currentPath="/guides/" />
+    <main className={`interior-main guide-main ${english ? "english-interior" : ""}`}>
+      <article className="page-shell guide-article">
+        <header className="guide-hero">
+          <p className="eyebrow">ONE DAY AT A TIME</p>
+          <h1>{copy.heading}</h1>
+          <p className="guide-intro">{copy.description}</p>
+        </header>
+        <div className="guide-body">
+          <section>
+            <h2>{copy.choose}</h2>
+            <ul>{copy.methods.map(({ title, body }) => <li key={title}><strong>{title}</strong><p>{body}</p></li>)}</ul>
+            <p><a className="text-link" href={copy.photosUrl}>{copy.photosLink}</a></p>
+          </section>
+          <section>
+            <h2>{copy.next}</h2>
+            <p>{copy.nextBody}</p>
+            <GuideLinks locale={locale} />
+          </section>
+        </div>
+      </article>
+    </main>
+    <SiteFooter locale={locale} />
+  </>;
 }
 export function GuideArticle({ slug, locale = "zh" }) {
   const english = locale === "en";

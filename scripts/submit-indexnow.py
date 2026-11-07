@@ -40,8 +40,8 @@ def main():
         raise SystemExit('Expected 1–10,000 changed URLs')
     for url in urls:
         parsed = urlparse(url)
-        if parsed.scheme != 'https' or parsed.netloc != host or not url.startswith(site):
-            raise SystemExit('URL is outside this project’s verified path: ' + url)
+        if parsed.scheme != 'https' or parsed.netloc != host or url not in canonical_urls:
+            raise SystemExit('URL is not a canonical page in the published sitemap: ' + url)
     key_location = urljoin(site, key_file)
     receipt = {'observedAt': datetime.now(timezone.utc).isoformat(), 'endpoint': 'https://api.indexnow.org/indexnow', 'urlCount': len(urls), 'urls': urls, 'submitted': False, 'indexed': 'not_verified'}
     if args.submit:
