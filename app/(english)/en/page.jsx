@@ -1,6 +1,5 @@
 import { appImage } from "../../../lib/imageAssets";
 import StructuredData from "../../../components/StructuredData";
-import HomeAnswers from "../../../components/HomeAnswers";
 import { localeMetadata } from "../../../lib/localeMetadata";
 import HomeMotion from "../../../components/HomeMotion";
 import TimeRibbon from "../../../components/TimeRibbon";
@@ -99,8 +98,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
-        <HomeAnswers locale="en" />
 
         <section className="closing-section">
           <div className="page-shell closing-grid">
