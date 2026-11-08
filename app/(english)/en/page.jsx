@@ -25,7 +25,7 @@ export default function HomePage() {
             <div className="hero-copy">
               <p className="eyebrow"><span className="eyebrow-line" /> A LITTLE PHOTO, EVERY DAY</p>
               <h1 id="hero-title">One selfie a day.<br />See how time <span className="hero-emphasis">changes you.</span></h1>
-              <p className="hero-lede">Take today’s selfie. Let DailyChange line up your eyes, then turn the photos you collect into a timelapse of you.</p>
+              <p className="hero-lede">Keep one selfie a day. DailyChange lines up your eyes on your iPhone. When the days add up, flip back through your photo calendar or watch them as a timelapse.</p>
               <div className="hero-actions">
                 <a className="button button-red" href={appStoreUrl}>Download on the App Store <span aria-hidden="true">↗</span></a>
                 <a className="hero-secondary" href="#experience">Explore DailyChange <span aria-hidden="true">↓</span></a>

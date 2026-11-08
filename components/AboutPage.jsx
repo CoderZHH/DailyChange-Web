@@ -31,7 +31,7 @@ const copy = {
     sourceTitle: "这些说明由谁维护",
     source: "App Store 公开开发者名称为“航杰 张”。本页与使用指南由 DailyChange 官网维护，按 App 的功能实现和商店资料核对。截图来自真实 App；功能、购买与地区供应以当前 App 和 App Store 为准。",
     storeSources: ["中国大陆 App Store", "美国 App Store"],
-    date: "资料更新：2026 年 11 月 6 日", guides: "使用指南", contact: "联系开发者", privacyLink: "阅读隐私政策", download: "在 App Store 查看 DailyChange",
+    date: "资料更新：2026 年 11 月 8 日", guides: "使用指南", contact: "联系开发者", privacyLink: "阅读隐私政策", download: "在 App Store 查看 DailyChange",
   },
   en: {
     title: "About DailyChange",
@@ -76,6 +76,7 @@ export default function AboutPage({ locale = "zh" }) {
       <p>{data.source}</p>
       <p>App Store ID {appStoreId}</p>
       <p><a className="text-link" href={appStoreListings.zh}>{data.storeSources[0]}</a>{" · "}<a className="text-link" href={appStoreListings.en}>{data.storeSources[1]}</a></p>
+      {!english && <p><a className="text-link" href="https://meta.appinn.net/t/topic/95455">开发者在小众软件论坛讲 DailyChange 的由来</a></p>}
       <a className="text-link" href="mailto:zhj1140351774@gmail.com">{data.contact}: zhj1140351774@gmail.com</a>
     </section>
     <section><h2>{data.guides}</h2><GuideLinks locale={locale} /></section>

@@ -28,7 +28,7 @@ export default function HomePage() {
             <div className="hero-copy">
               <p className="eyebrow"><span className="eyebrow-line" /> A LITTLE PHOTO, EVERY DAY</p>
               <h1 id="hero-title">每天自拍，<br />看见自己<span className="hero-emphasis">慢慢变化。</span></h1>
-              <p className="hero-lede">每天留一张自拍，眼睛的位置交给 DailyChange 来对齐。等照片慢慢积攒起来，再把它们连成一段变化视频。</p>
+              <p className="hero-lede">每天留一张自拍，DailyChange 会在 iPhone 上对齐双眼。过些日子，在日历里翻回去看，或把照片连成一段延时视频。</p>
               <div className="hero-actions">
                 <a className="button button-red" href={appStoreUrl}>前往 App Store 下载 <span aria-hidden="true">↗</span></a>
                 <a className="hero-secondary" href="#experience">认识 DailyChange <span aria-hidden="true">↓</span></a>
