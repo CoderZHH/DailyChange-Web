@@ -6,6 +6,7 @@ import TimeRibbon from "../../../components/TimeRibbon";
 import ScrollFloat from "../../../components/react-bits/ScrollFloat";
 import TiltedCard from "../../../components/react-bits/TiltedCard";
 import AppScreen from "../../../components/AppScreen";
+import ChangeArchive from "../../../components/ChangeArchive";
 import SiteFooter from "../../../components/SiteFooter";
 import SiteHeader from "../../../components/SiteHeader";
 import { asset } from "../../../lib/paths";
@@ -28,7 +29,7 @@ export default function HomePage() {
               <p className="hero-lede">Keep one selfie a day. DailyChange lines up your eyes on your iPhone. When the days add up, flip back through your photo calendar or watch them as a timelapse.</p>
               <div className="hero-actions">
                 <a className="button button-red" href={appStoreUrl}>Download on the App Store <span aria-hidden="true">↗</span></a>
-                <a className="hero-secondary" href="#experience">Explore DailyChange <span aria-hidden="true">↓</span></a>
+                <a className="hero-secondary" href="#experience">See a real timelapse <span aria-hidden="true">↓</span></a>
               </div>
               <div className="hero-index" aria-hidden="true"><span>01 Today</span><span>02 Past</span><span>03 Tomorrow</span></div>
             </div>
@@ -44,11 +45,7 @@ export default function HomePage() {
           <TimeRibbon />
         </section>
 
-        <section className="manifesto page-shell" id="experience">
-          <div className="section-tag">THE IDEA <span>·</span> ONE PHOTO AT A TIME</div>
-          <p><ScrollFloat>Some changes only become clear when you look back.</ScrollFloat></p>
-          <span className="manifesto-side">A little, every day.<br />A life, over time.</span>
-        </section>
+        <ChangeArchive locale="en" />
 
         <section className="chapter chapter-today" aria-labelledby="today-title">
           <div className="page-shell chapter-grid">
