@@ -29,7 +29,7 @@ export default function HomePage() {
               <p className="hero-lede">Keep one selfie a day. DailyChange lines up your eyes on your iPhone. When the days add up, flip back through your photo calendar or watch them as a timelapse.</p>
               <div className="hero-actions">
                 <a className="button button-red" href={appStoreUrl}>Download on the App Store <span aria-hidden="true">↗</span></a>
-                <a className="hero-secondary" href="#experience">See a real timelapse <span aria-hidden="true">↓</span></a>
+                <a className="hero-secondary" href="#experience">See the little changes <span aria-hidden="true">↓</span></a>
               </div>
               <div className="hero-index" aria-hidden="true"><span>01 Today</span><span>02 Past</span><span>03 Tomorrow</span></div>
             </div>

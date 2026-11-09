@@ -32,7 +32,7 @@ export default function HomePage() {
               <p className="hero-lede">每天留一张自拍，DailyChange 会在 iPhone 上对齐双眼。过些日子，在日历里翻回去看，或把照片连成一段延时视频。</p>
               <div className="hero-actions">
                 <a className="button button-red" href={appStoreUrl}>前往 App Store 下载 <span aria-hidden="true">↗</span></a>
-                <a className="hero-secondary" href="#experience">看一段变化视频 <span aria-hidden="true">↓</span></a>
+                <a className="hero-secondary" href="#experience">看看时间留下的变化 <span aria-hidden="true">↓</span></a>
               </div>
               <div className="hero-index" aria-hidden="true"><span>01 今天</span><span>02 过去</span><span>03 明天</span></div>
             </div>
