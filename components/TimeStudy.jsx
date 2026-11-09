@@ -9,7 +9,7 @@ export default function TimeStudy({locale='zh'}){
  const labels=en?['Growing out my hair','My first beard','Growing up','Growing together','Growing my curls','A new shade']:['头发，慢慢留长。','胡子，一点点蓄起。','孩子，悄悄长大。','陪它，一起长大。','卷发，自在生长。','发色，慢慢褪去。'];
  return <div className="photo-journey" ref={root} data-locale={locale}>
   <div className="time-canvas">
-   <header className="time-canvas-heading"><p>DAILYCHANGE / A LITTLE EVERY DAY</p><h2>{en?<>Watch the days<br/><em>unfold.</em></>:<>把日子展开，<br/><em>看见自己的变化。</em></>}</h2><div className="time-heading-note"><p>{en?'A little longer. A little older. A little different.':'每天一张，留住那些慢慢发生的改变。'}</p><span>{en?'SCROLL TO UNFOLD':'向下滚动，展开这些日子'} ↓</span></div></header>
+   <header className="time-canvas-heading"><p>DAILYCHANGE / A LITTLE EVERY DAY</p><h2>{en?<>The days pass.<br/><em>Changes stay.</em></>:<>日子一张张，<br/><em>变化一点点。</em></>}</h2><div className="time-heading-note"><p>{en?'A little longer. A little older. A little different.':'每天一张，留住那些慢慢发生的改变。'}</p><span>{en?'SCROLL THROUGH THE DAYS':'向下滚动，看见这些日子'} ↓</span></div></header>
    <div className="time-constellation">
     {scenes.map((scene,i)=><figure className={`time-window window-${scene}`} data-scene={scene} key={scene} style={{'--depth':[30,-32,20,-20,24,-24][i]+'px','--tilt':[-3,3,-5,4,4,-4][i]+'deg'}}>
      <div className="window-photo" role="img" aria-label={labels[i]} style={{backgroundImage:`url("${asset(`/media/sequence/${scene}-sequence.webp`)}")`}}/>
